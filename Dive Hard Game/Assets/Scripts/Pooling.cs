@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Pooling : MonoBehaviour {
     [SerializeField]
-    int[] x = new int[3];
-    InGameGoodObjects[] pool;
+    int[] good = new int[3], bad = new int[4];
+    InGameGoodObjects[] poolGood;
+    InGameBadObjects[] poolBad;
 	// Use this for initialization
 	void Start () {
 		
