@@ -300,6 +300,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Pre proyect\PortalGun\PortalGun.cs" />
+    <Compile Include="Assets\Pre proyect\Scripts\Camara.cs" />
+    <Compile Include="Assets\Pre proyect\Scripts\Lanzador.cs" />
+    <Compile Include="Assets\Pre proyect\Scripts\SeguidorPJ.cs" />
+    <Compile Include="Assets\Pre proyect\Scripts\SpeedCounter.cs" />
+    <Compile Include="Assets\Pre proyect\Scripts\SpriteDinamico.cs" />
     <Compile Include="Assets\Scripts\Avion.cs" />
     <Compile Include="Assets\Scripts\Licuadora.cs" />
     <Compile Include="Assets\Scripts\Meteorito.cs" />
