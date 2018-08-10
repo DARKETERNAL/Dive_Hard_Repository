@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Paloma : InGameObjects
+public class Paloma : InGameGoodObjects
 {
-    protected override void Action()
+    protected override void Action() //comportamiento pasivo
     {
       
     }
 
-    protected override IEnumerator Activation()
+    protected override IEnumerator Activation(Player _jugador) //comportamiento activo
     {
-        return base.Activation();
+        yield return null;
     }
 }

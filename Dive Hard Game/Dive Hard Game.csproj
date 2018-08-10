@@ -300,11 +300,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\InGameObjects.cs" />
+    <Compile Include="Assets\Scripts\Avion.cs" />
+    <Compile Include="Assets\Scripts\Licuadora.cs" />
+    <Compile Include="Assets\Scripts\Meteorito.cs" />
     <Compile Include="Assets\Scripts\Paloma.cs" />
+    <Compile Include="Assets\Scripts\Paracaidas.cs" />
+    <Compile Include="Assets\Scripts\Parenting\InGameBadObjects.cs" />
+    <Compile Include="Assets\Scripts\Parenting\InGameGoodObjects.cs" />
+    <Compile Include="Assets\Scripts\Parenting\PassiveMechanics.cs" />
+    <Compile Include="Assets\Scripts\Parenting\StoreObjectsParent.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Pooling.cs" />
+    <Compile Include="Assets\Scripts\Serpiente.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
-    <Compile Include="Assets\Scripts\StoreObjectsParent.cs" />
+    <Compile Include="Assets\Scripts\Slime.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
