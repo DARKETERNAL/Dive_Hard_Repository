@@ -10,7 +10,10 @@ public class Singleton : MonoBehaviour
     void Awake()
     {
         if (_instance == null)
+        {
             _instance = this;
+            DontDestroyOnLoad(transform.gameObject);
+        }      
         else
             Destroy(transform.gameObject);
     }
