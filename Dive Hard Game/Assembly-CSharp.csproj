@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Serpiente.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\Slime.cs" />
+    <Compile Include="Assets\Scripts\Swipe.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/seb_3/Desktop/Dive_Hard_Repository/Dive Hard Game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

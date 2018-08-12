@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storeIndex: 0
-  active: 1
+  active: 0
   cantidadAcelerar: 2
 --- !u!212 &212949833483395124
 SpriteRenderer:
