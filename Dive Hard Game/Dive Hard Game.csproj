@@ -309,20 +309,28 @@
     <Compile Include="Assets\Pre proyect\Scripts\SeguidorPJ.cs" />
     <Compile Include="Assets\Pre proyect\Scripts\SpeedCounter.cs" />
     <Compile Include="Assets\Pre proyect\Scripts\SpriteDinamico.cs" />
+    <Compile Include="Assets\Scripts\AlaDelta.cs" />
     <Compile Include="Assets\Scripts\Avion.cs" />
+    <Compile Include="Assets\Scripts\Edificio.cs" />
+    <Compile Include="Assets\Scripts\Gravedad.cs" />
+    <Compile Include="Assets\Scripts\JetPack.cs" />
     <Compile Include="Assets\Scripts\Licuadora.cs" />
     <Compile Include="Assets\Scripts\Meteorito.cs" />
+    <Compile Include="Assets\Scripts\Multiplicador.cs" />
     <Compile Include="Assets\Scripts\Paloma.cs" />
     <Compile Include="Assets\Scripts\Paracaidas.cs" />
     <Compile Include="Assets\Scripts\Parenting\InGameBadObjects.cs" />
     <Compile Include="Assets\Scripts\Parenting\InGameGoodObjects.cs" />
     <Compile Include="Assets\Scripts\Parenting\PassiveMechanics.cs" />
     <Compile Include="Assets\Scripts\Parenting\StoreObjectsParent.cs" />
+    <Compile Include="Assets\Scripts\Piernas.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Pooling.cs" />
+    <Compile Include="Assets\Scripts\PortalGun.cs" />
     <Compile Include="Assets\Scripts\Serpiente.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\Slime.cs" />
+    <Compile Include="Assets\Scripts\Swipe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />

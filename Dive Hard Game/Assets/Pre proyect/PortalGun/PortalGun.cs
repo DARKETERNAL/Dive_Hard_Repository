@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PortalGun : MonoBehaviour {
+public class PortalGun2 : MonoBehaviour {
 
 	public GameObject portalEntrada;
 	public GameObject PortalSalida;

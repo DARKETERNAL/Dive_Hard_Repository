@@ -2,7 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PassiveMechanics : StoreObjectsParent {
+public abstract class PassiveMechanics : StoreObjectsParent {
 
-
+    private void Start()
+    {
+        Execution();
+    }
+    protected abstract void Execution();
+   
 }
