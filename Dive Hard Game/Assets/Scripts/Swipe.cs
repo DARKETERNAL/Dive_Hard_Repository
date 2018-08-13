@@ -2,30 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< HEAD
-public class Swipe : PassiveMechanics
-{
-    Vector2 intial, final, vecMov;
-    [SerializeField]
-    float minDis, magnitud;
-    Rigidbody2D me;
-    protected override void Execution() //start
-    {
-        me = GetComponent<Rigidbody2D>();
-    }
-    private void FixedUpdate()
-    {
-        if (Input.GetButtonDown("Fire1"))
-            intial = Input.mousePosition;
-        if (Input.GetButtonUp("Fire1"))
-        {
-            final = Input.mousePosition;
-            vecMov = (final - intial).normalized;
-            if (Vector2.Distance(final, intial) >= minDis)
-                me.AddForce(vecMov * magnitud, ForceMode2D.Impulse);
-        }
-    }
-=======
+
+//<<<<<<< HEAD
+//public class Swipe : PassiveMechanics
+//{
+//    Vector2 intial, final, vecMov;
+//    [SerializeField]
+//    float minDis, magnitud;
+//    Rigidbody2D me;
+//    protected override void Execution() //start
+//    {
+//        me = GetComponent<Rigidbody2D>();
+//    }
+//    private void FixedUpdate()
+//    {
+//        if (Input.GetButtonDown("Fire1"))
+//            intial = Input.mousePosition;
+//        if (Input.GetButtonUp("Fire1"))
+//        {
+//            final = Input.mousePosition;
+//            vecMov = (final - intial).normalized;
+//            if (Vector2.Distance(final, intial) >= minDis)
+//                me.AddForce(vecMov * magnitud, ForceMode2D.Impulse);
+//        }
+//    }
+//=======
 public class Swipe : MonoBehaviour {
 
 	bool tap, isUp, isDraging = false;
@@ -119,7 +120,7 @@ public class Swipe : MonoBehaviour {
 			}
 		}
 
-		print(counter);
+		//print(counter);
 	}
 
 	private void Reset()
@@ -127,5 +128,5 @@ public class Swipe : MonoBehaviour {
 		starTouch = swipeDelta = Vector2.zero;
 		isDraging = false;
 	}
->>>>>>> 24ab2908bed852e6f7ff84551c8fb0633bb5d671
+//>>>>>>> 24ab2908bed852e6f7ff84551c8fb0633bb5d671
 }

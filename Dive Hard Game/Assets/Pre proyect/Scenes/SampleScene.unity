@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 28356348}
   - component: {fileID: 28356347}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: TmpoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -401,7 +401,7 @@ GameObject:
   - component: {fileID: 131084243}
   - component: {fileID: 131084242}
   m_Layer: 5
-  m_Name: Text
+  m_Name: VelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1415,8 +1415,9 @@ GameObject:
   - component: {fileID: 639705455}
   - component: {fileID: 639705459}
   - component: {fileID: 639705460}
+  - component: {fileID: 639705461}
   m_Layer: 0
-  m_Name: Olarte GAY
+  m_Name: Suicide Guy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1618,12 +1619,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 639705452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ed67fab78637c4093ad44b844294ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 05a3b69235b1a1a45a1651b658217f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxCounter: 4
   coldDown: 5
-  magnitud: 0.4
+  magnitud: 0.2
+  maxCounter: 4
+--- !u!114 &639705461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639705452}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882b9a7029bab514fa4e9e9a6439264e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeIndex: 0
+  intencidad: 30
+  duracion: 5
 --- !u!1 &844924594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1938,7 +1953,7 @@ GameObject:
   - component: {fileID: 1011371269}
   - component: {fileID: 1011371268}
   m_Layer: 5
-  m_Name: Velocidad (1)
+  m_Name: Tiempo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2243,7 +2258,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1150816011}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0070dd61e28c9c848b48a9a79c323293, type: 3}
   m_Name: 
@@ -2252,10 +2267,10 @@ MonoBehaviour:
   puntero: {fileID: 1677556593}
   mText: {fileID: 1011371268}
   contador: {fileID: 1963043265}
-  multiplicadorFuerza: 8
-  velocidad: 4
+  multiplicadorFuerza: 5
+  velocidad: 1
   amplitud: 40
-  anguloInicio: 132
+  anguloInicio: 90
 --- !u!1 &1298722921
 GameObject:
   m_ObjectHideFlags: 0
@@ -3129,34 +3144,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1626952372}
   m_CullTransparentMesh: 0
---- !u!1 &1630927561
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1630927562}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1630927562
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1630927561}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.68, y: -6.03, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1677556591
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,7 +3231,7 @@ GameObject:
   - component: {fileID: 1677657077}
   - component: {fileID: 1677657079}
   m_Layer: 0
-  m_Name: Caja (24)
+  m_Name: Sigue PJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3690,7 +3677,7 @@ GameObject:
   - component: {fileID: 1963043267}
   - component: {fileID: 1963043266}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Contador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
