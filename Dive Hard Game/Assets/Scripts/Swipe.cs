@@ -31,7 +31,8 @@ public class Swipe : MonoBehaviour {
 
 	bool tap, isUp, isDraging = false;
 	int counter;
-	float timer; 
+	float timer;
+	float multiplicador;
 
 	[SerializeField]
 	float coldDown, magnitud;
@@ -97,7 +98,7 @@ public class Swipe : MonoBehaviour {
 		//Pasar la Zona muerta
 		if (swipeDelta.magnitude > 200 && counter > 0)
 		{
-			mRB.AddForce(swipeDelta * magnitud,ForceMode2D.Impulse);
+			mRB.AddForce(multiplicador*swipeDelta.normalized * magnitud,ForceMode2D.Impulse);
 			counter--;
 			Reset();
 		}
