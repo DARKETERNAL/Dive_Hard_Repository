@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Serpiente : InGameBadObjects {
+public class Serpiente : MundoSinTienda {
 
     protected override void Action() //comportamiento pasivo
     {

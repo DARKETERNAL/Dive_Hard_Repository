@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Licuadora : InGameGoodObjects {
+public class Paracaidas : MundoSinTienda {
 
     protected override void Action() //comportamiento pasivo
     {

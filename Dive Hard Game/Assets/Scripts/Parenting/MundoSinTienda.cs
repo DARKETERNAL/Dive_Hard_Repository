@@ -2,10 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class InGameGoodObjects : StoreObjectsParent
+public abstract class MundoSinTienda : MonoBehaviour
 {
+
     public bool active;
-    // Update is called once per frame
+    [SerializeField]
+    float probability;
+    public float height, range = 50f;
+    public Vector3 offSet;
+    public float Probability { get { return probability; } set { probability = Mathf.Clamp(value, 0, 50); } }
+
     protected virtual void FixedUpdate()
     {
         if (active)

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Meteorito : InGameGoodObjects {
+public class Meteorito : MundoConTienda {
 
 	[SerializeField]
 	float amount = 2;
@@ -24,7 +24,6 @@ public class Meteorito : InGameGoodObjects {
 		rb.velocity = new Vector2(Mathf.Abs(rb.velocity.x), -1 * Mathf.Abs(rb.velocity.y));
 		rb.velocity += new Vector2(speed/6,-speed/6);
 
-
 		for (int i = 0; i < iteracion; i++)
 		{
 			rb.velocity *= new Vector2(speed / 10, speed / 10) * amount;
@@ -32,7 +31,7 @@ public class Meteorito : InGameGoodObjects {
 		}
 		transform.parent = null;
 		move = true;
-		Destroy(this.gameObject,2);
+        active = false;
 		//Aqui un sonido de meteorito
 		yield return null;
     }
