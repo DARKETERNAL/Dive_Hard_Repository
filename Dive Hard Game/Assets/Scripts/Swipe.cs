@@ -85,7 +85,7 @@ public class Swipe : PassiveMechanics {
 		swipeDelta = Vector2.zero;
 		//Calcular Distancia
 		if (isDraging)
-		{
+		{ 
 			if (Input.touches.Length > 0)
 				swipeDelta = Input.touches[0].position - starTouch;
 			if (Input.GetMouseButton(0))
@@ -96,6 +96,7 @@ public class Swipe : PassiveMechanics {
 		//Pasar la Zona muerta
 		if (swipeDelta.magnitude > 200 && counter > 0)
 		{
+
 			mRB.AddForce(multiplicador*swipeDelta.normalized * magnitud,ForceMode2D.Impulse);
 			counter--;
 			Reset();
