@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-//<<<<<<< HEAD
 //public class Swipe : PassiveMechanics
 //{
 //    Vector2 intial, final, vecMov;
@@ -26,8 +24,8 @@ using UnityEngine;
 //                me.AddForce(vecMov * magnitud, ForceMode2D.Impulse);
 //        }
 //    }
-//=======
-public class Swipe : MonoBehaviour {
+
+public class Swipe : PassiveMechanics {
 
 	bool tap, isUp, isDraging = false;
 	int counter;
@@ -42,7 +40,7 @@ public class Swipe : MonoBehaviour {
 	Vector2 starTouch, swipeDelta;
 	Rigidbody2D mRB;
 
-	private void Start()
+	protected override void Execution()
 	{
 		mRB = GetComponent<Rigidbody2D>();
 		counter = maxCounter;
@@ -129,5 +127,4 @@ public class Swipe : MonoBehaviour {
 		starTouch = swipeDelta = Vector2.zero;
 		isDraging = false;
 	}
-//>>>>>>> 24ab2908bed852e6f7ff84551c8fb0633bb5d671
 }
