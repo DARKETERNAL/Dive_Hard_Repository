@@ -53,9 +53,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  probability: 80
-  height: 250
-  range: 50
+  probability: 50
+  height: 1000
+  inverseRange: 0
   offSet: {x: 0, y: 0, z: 0}
   cantidadFreno: 2
 --- !u!212 &212504351955872492

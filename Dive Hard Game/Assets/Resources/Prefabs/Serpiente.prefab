@@ -69,9 +69,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  probability: 40
-  height: 60
-  range: 20
+  probability: 50
+  height: 7000
+  inverseRange: 0
   offSet: {x: 0, y: 0, z: 0}
 --- !u!212 &212949833483395124
 SpriteRenderer:
