@@ -15,20 +15,28 @@ public class Spawner : MonoBehaviour
     MundoConTienda[] aspirantG = new MundoConTienda[4];
     MundoSinTienda selectedB;
     MundoSinTienda[] aspirantB = new MundoSinTienda[4];
+
+
     // Use this for initialization
     void Start()
     {
+
         mPools = GetComponent<Pooling>();
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (goodBool)
-            StartCoroutine(GoodS());
+        if (Mathf.Abs(target.velocity.y) > 20)
+        {
+            if (goodBool)
+                StartCoroutine(GoodS());
 
-        if (badBool)
-            StartCoroutine(BadS());
+            if (badBool)
+                StartCoroutine(BadS());
+        }
+
     }
     IEnumerator GoodS()
     {
@@ -36,10 +44,13 @@ public class Spawner : MonoBehaviour
         Vector2 acI = target.velocity;
         yield return new WaitForSeconds(0.1f);
         Vector2 acF = target.velocity;
-        GV = new Vector3((acI.x * tG) + ((acF.x - acI.x) * (tG) * (tG)) / 2, (acI.y * tG) + ((acF.y - acI.y) * (tG) * (tG)) / 2, 0);
+        GV = target.transform.position + new Vector3((acF.x * tG) + ((acF.x - acI.x) * (tG) * (tG)) / 2, (acF.y * tG) + ((acF.y - acI.y) * (tG) * (tG)) / 2, 0);
+   
+        selectedG = null;
         for (int i = 0; i < aspirantG.Length; i++)
         {
-            aspirantG[i] = mPools.poolGood[Random.Range(0, mPools.poolGood.Length)];
+            int k = Random.Range(0, mPools.poolGood.Length);
+            aspirantG[i] = mPools.poolGood[k];
             yield return new WaitForSeconds(0.01f);
         }
         for (int i = 0; i < aspirantG.Length; i++)
@@ -47,12 +58,14 @@ public class Spawner : MonoBehaviour
             if (selectedG == null)
                 selectedG = aspirantG[i];
 
-            if ((-(((target.transform.position.y - selectedG.height) * (target.transform.position.y - selectedG.height)) / selectedG.range) + 3) < (-(((target.transform.position.y - aspirantG[i].height) * (target.transform.position.y - aspirantG[i].height)) / aspirantG[i].range) + 3))
-                selectedG = aspirantG[i];
+            if ((-(((GV.y - selectedG.height) * (GV.y - selectedG.height)) * selectedG.inverseRange) + 3) < (-(((GV.y - aspirantG[i].height) * (GV.y - aspirantG[i].height)) * aspirantG[i].inverseRange) + 3))
+                if (!aspirantG[i].active)
+                    selectedG = aspirantG[i];
 
             yield return new WaitForSeconds(0.01f);
         }
-        if ((-(((target.transform.position.y - selectedG.height) * (target.transform.position.y - selectedG.height)) / selectedG.range) + 3) <= 0)
+        
+        if (((-(((GV.y - selectedG.height) * (GV.y - selectedG.height)) * selectedG.inverseRange) + 3) <= 0) || (selectedG.active))
         {
             goodBool = true;
             yield break;
@@ -60,6 +73,7 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         //posible correccion de offsets
         selectedG.transform.position = GV + selectedG.offSet;
+        
         selectedG.active = true;
         goodBool = true;
         yield return null;
@@ -70,10 +84,13 @@ public class Spawner : MonoBehaviour
         Vector2 acI = target.velocity;
         yield return new WaitForSeconds(0.1f);
         Vector2 acF = target.velocity;
-        BV = new Vector3((acI.x * tB) + ((acF.x - acI.x) * (tB) * (tB)) / 2, (acI.y * tB) + ((acF.y - acI.y) * (tB) * (tB)) / 2, 0);
+        BV = target.transform.position + new Vector3((acF.x * tB) + ((acF.x - acI.x) * (tB) * (tB)) / 2, (acF.y * tB) + ((acF.y - acI.y) * (tB) * (tB)) / 2, 0);
+        
+        selectedB = null;
         for (int i = 0; i < aspirantB.Length; i++)
         {
-            aspirantB[i] = mPools.poolBad[Random.Range(0, mPools.poolBad.Length)];
+            int k = Random.Range(0, mPools.poolBad.Length);
+            aspirantB[i] = mPools.poolBad[k];
             yield return new WaitForSeconds(0.01f);
         }
         for (int i = 0; i < aspirantB.Length; i++)
@@ -81,12 +98,15 @@ public class Spawner : MonoBehaviour
             if (selectedB == null)
                 selectedB = aspirantB[i];
 
-            if ((-(((target.transform.position.y - selectedB.height) * (target.transform.position.y - selectedB.height)) / selectedB.range) + 3) < (-(((target.transform.position.y - aspirantB[i].height) * (target.transform.position.y - aspirantB[i].height)) / aspirantB[i].range) + 3))
-                selectedB = aspirantB[i];
+            if ((-(((BV.y - selectedB.height) * (BV.y - selectedB.height)) * selectedB.inverseRange) + 3) < (-(((BV.y - aspirantB[i].height) * (BV.y - aspirantB[i].height)) * aspirantB[i].inverseRange) + 3))
+                if (!aspirantB[i].active)
+                    selectedB = aspirantB[i];
+
 
             yield return new WaitForSeconds(0.01f);
         }
-        if ((-(((target.transform.position.y - selectedB.height) * (target.transform.position.y - selectedB.height)) / selectedB.range) + 3) <= 0)
+        
+        if (((-(((BV.y - selectedB.height) * (BV.y - selectedB.height)) * selectedB.inverseRange) + 3) <= 0) || (selectedB.active))
         {
             badBool = true;
             yield break;
@@ -94,6 +114,7 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         //posible correccion de offsets
         selectedB.transform.position = BV + selectedB.offSet;
+        
         selectedB.active = true;
         badBool = true;
         yield return null;

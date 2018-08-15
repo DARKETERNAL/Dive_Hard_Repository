@@ -71,7 +71,7 @@ MonoBehaviour:
   active: 0
   probability: 50
   height: 0
-  range: 0.02
+  inverseRange: 0
   offSet: {x: 0, y: 0, z: 0}
 --- !u!212 &212949833483395124
 SpriteRenderer:

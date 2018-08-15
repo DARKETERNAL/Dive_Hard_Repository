@@ -5,7 +5,7 @@ using UnityEngine;
 public class Meteorito : MundoConTienda {
 
 	[SerializeField]
-	float amount = 2;
+	float amount = 1.02f;
 	float iteracion = 8;
 	float speed = 8;
 	bool move = true;
@@ -26,12 +26,12 @@ public class Meteorito : MundoConTienda {
 
 		for (int i = 0; i < iteracion; i++)
 		{
-			rb.velocity *= new Vector2(speed / 10, speed / 10) * amount;
+			rb.velocity += new Vector2(speed / 10, speed / 10) * amount;
 			yield return new WaitForSeconds(0.2f);
 		}
 		transform.parent = null;
 		move = true;
-        active = false;
+        BackToPool();
 		//Aqui un sonido de meteorito
 		yield return null;
     }
