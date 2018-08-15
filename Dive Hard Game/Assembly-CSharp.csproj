@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\In Game Mechanics\PortalGun.cs" />
     <Compile Include="Assets\Scripts\In Game Mechanics\Serpiente.cs" />
     <Compile Include="Assets\Scripts\In Game Mechanics\Slime.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\StartActive.cs" />
     <Compile Include="Assets\Scripts\Parenting\MundoConTienda.cs" />
     <Compile Include="Assets\Scripts\Parenting\MundoSinTienda.cs" />
     <Compile Include="Assets\Scripts\Parenting\PassiveMechanics.cs" />

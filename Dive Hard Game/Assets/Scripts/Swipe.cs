@@ -30,7 +30,7 @@ public class Swipe : PassiveMechanics {
 	bool tap, isUp, isDraging = false;
 	int counter;
 	float timer;
-	float multiplicador;
+	float multiplicador = 1;
 
 	[SerializeField]
 	float coldDown, magnitud;

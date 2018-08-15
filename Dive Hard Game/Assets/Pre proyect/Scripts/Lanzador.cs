@@ -7,6 +7,7 @@ public class Lanzador : MonoBehaviour {
 
 	float fuerza;
 	public Rigidbody2D cuerpo;
+	Swipe swipe;
 	public Transform puntero;
 	public Text mText;
 	public RectTransform contador;
@@ -21,7 +22,8 @@ public class Lanzador : MonoBehaviour {
 	float velocidad, amplitud, anguloInicio;
 	// Use this for initialization
 	void Start () {
-		
+		swipe = cuerpo.gameObject.GetComponent<Swipe>();
+		swipe.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -58,6 +60,7 @@ public class Lanzador : MonoBehaviour {
 	{
 		cuerpo.AddForce(puntero.up * -1 * fuerza*multiplicadorFuerza, ForceMode2D.Impulse);
 		Destroy(GetComponent<Lanzador>());
+		swipe.enabled = true;
 		mText.text = 0.ToString();
 	}
 

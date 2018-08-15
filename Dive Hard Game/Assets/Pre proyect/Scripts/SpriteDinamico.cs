@@ -6,14 +6,14 @@ public class SpriteDinamico : MonoBehaviour {
 
 	public Sprite[] sprites;
 	Rigidbody2D rig;
-	PolygonCollider2D collider;
+	//PolygonCollider2D collider;
 	SpriteRenderer sprRenderer;
 
 	// Use this for initialization
 	void Start () {
 		rig = GetComponent<Rigidbody2D>();
 		sprRenderer = GetComponent<SpriteRenderer>();
-		collider = GetComponent<PolygonCollider2D>();
+		//collider = GetComponent<PolygonCollider2D>();
 	}
 	
 	// Update is called once per frame

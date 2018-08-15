@@ -8,7 +8,8 @@ public class PortalGun2 : MonoBehaviour {
 	public GameObject PortalSalida;
 
 	[SerializeField]
-	int alturaDelPortal, numDisparos;
+	int alturaDelPortal;
+	int numDisparos = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,7 @@ public class PortalGun2 : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
+
 		if (collision.gameObject == portalEntrada)
 		{
 			if (numDisparos > 0)
