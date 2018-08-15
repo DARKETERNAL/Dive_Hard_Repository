@@ -1416,6 +1416,7 @@ GameObject:
   - component: {fileID: 639705459}
   - component: {fileID: 639705460}
   - component: {fileID: 639705461}
+  - component: {fileID: 639705462}
   m_Layer: 0
   m_Name: Suicide Guy
   m_TagString: Untagged
@@ -1640,6 +1641,18 @@ MonoBehaviour:
   storeIndex: 0
   intencidad: 30
   duracion: 5
+--- !u!114 &639705462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 639705452}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb97f6faf9e5ac41894c42c23648882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeIndex: 0
 --- !u!1 &844924594
 GameObject:
   m_ObjectHideFlags: 0
