@@ -1,4 +1,0 @@
-#Wed Aug 15 16:51:25 COT 2018
-base.0=C\:\\Users\\diego\\Desktop\\Semestre 6\\Taller 6\\Dive Hard Project\\Dive_Hard_Repository\\Dive Hard Game\\Temp\\gradleOut\\build\\intermediates\\transforms\\dex\\release\\0
-path.0=classes.dex
-renamed.0=classes.dex
