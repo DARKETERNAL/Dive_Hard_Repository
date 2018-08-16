@@ -18,8 +18,8 @@ public abstract class MundoConTienda : StoreObjectsParent
     Vector3 player;
     private void Start()
     {
-        float t = (ActualLevel / 2f);
-        Probability *= t;
+        // float t = (ActualLevel / 2f);
+        // Probability *= t;
     }
     protected virtual void FixedUpdate()
     {

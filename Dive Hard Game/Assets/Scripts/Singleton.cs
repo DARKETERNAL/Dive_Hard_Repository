@@ -9,6 +9,7 @@ public class Singleton : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         if (_instance == null)
         {
             _instance = this;
@@ -16,5 +17,6 @@ public class Singleton : MonoBehaviour
         }      
         else
             Destroy(transform.gameObject);
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 }
