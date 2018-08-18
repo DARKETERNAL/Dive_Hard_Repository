@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+#region Propuesta Diego
 //public class Swipe : PassiveMechanics
 //{
 //    Vector2 intial, final, vecMov;
@@ -24,8 +26,16 @@ using UnityEngine;
 //                me.AddForce(vecMov * magnitud, ForceMode2D.Impulse);
 //        }
 //    }
+#endregion
 
 public class Swipe : PassiveMechanics {
+
+	//Cosas para el counter del swipe
+	[SerializeField]
+	public GameObject swipeCounter;
+	Image[] counterSprites = new Image[5];
+	Vector3 counterPos = new Vector3 (-330 , 60 , 0);
+	Color baseColor;
 
 	bool tap, isUp, isDraging = false;
 	int counter;
@@ -44,6 +54,14 @@ public class Swipe : PassiveMechanics {
 	{
 		mRB = GetComponent<Rigidbody2D>();
 		counter = maxCounter;
+
+		for (int i = 0; i < maxCounter; i++)
+		{
+			GameObject g = Instantiate(swipeCounter,GameObject.Find("Canvas").GetComponent<RectTransform>().position + counterPos - new Vector3(0,counterPos.y / 1.8f ,0)*i, Quaternion.identity);
+			g.transform.SetParent(GameObject.Find("Canvas").transform);
+			counterSprites[i] = (g.GetComponent<Image>());
+		}
+		baseColor = counterSprites[0].color;
 	}
 
 	private void Update()
@@ -99,6 +117,10 @@ public class Swipe : PassiveMechanics {
 
 			mRB.AddForce(multiplicador*swipeDelta.normalized * magnitud,ForceMode2D.Impulse);
 			counter--;
+			for (int i = counter; i < maxCounter; i++)
+			{
+				counterSprites[i].color = new Color(baseColor.r, baseColor.g, baseColor.b, 0);
+			}
 			Reset();
 		}
 
@@ -109,6 +131,7 @@ public class Swipe : PassiveMechanics {
 			{
 				timer += Time.deltaTime;
 
+				counterSprites[counter].color = new Color(baseColor.r, baseColor.g, baseColor.b, timer / coldDown);
 				if (timer >= coldDown)
 					isUp = true;
 			}
@@ -116,6 +139,7 @@ public class Swipe : PassiveMechanics {
 			{
 				timer = 0;
 				isUp = false;
+				counterSprites[counter].color = new Color(baseColor.r, baseColor.g, baseColor.b, 1);
 				counter++;
 			}
 		}

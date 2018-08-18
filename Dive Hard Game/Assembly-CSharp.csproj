@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\Parenting\StoreObjectsParent.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Pooling.cs" />
+    <Compile Include="Assets\Scripts\Reset.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Swipe.cs" />

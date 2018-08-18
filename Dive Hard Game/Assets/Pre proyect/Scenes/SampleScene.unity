@@ -1339,9 +1339,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storeIndex: 0
+  swipeCounter: {fileID: 1910195641795976, guid: 605e0e048589b854cb45ece6073e8481,
+    type: 2}
   coldDown: 5
   magnitud: 100
-  maxCounter: 4
+  maxCounter: 5
 --- !u!114 &639705461
 MonoBehaviour:
   m_ObjectHideFlags: 0
