@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\InGameObjects.cs" />
     <Compile Include="Assets\Scripts\Paloma.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
@@ -71,6 +72,58 @@
     <Compile Include="Assets\UberAudio-master\AudioEventBank.cs" />
     <Compile Include="Assets\UberAudio-master\AudioManager.cs" />
     <Compile Include="Assets\UberAudio-master\Examples\UberAudioExample.cs" />
+=======
+    <Compile Include="Assets\Pre proyect\PortalGun\PortalGun.cs" />
+    <Compile Include="Assets\Pre proyect\Scripts\Camara.cs" />
+    <Compile Include="Assets\Pre proyect\Scripts\Lanzador.cs" />
+    <Compile Include="Assets\Pre proyect\Scripts\SeguidorPJ.cs" />
+    <Compile Include="Assets\Pre proyect\Scripts\SpeedCounter.cs" />
+    <Compile Include="Assets\Pre proyect\Scripts\SpriteDinamico.cs" />
+    <Compile Include="Assets\Scripts\Altimeter.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\AlaDelta.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\Avion.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\BloodBag.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\Edificio.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\Gravedad.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\JetPack.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\Licuadora.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\Meteorito.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\Multiplicador.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\Paloma.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\Paracaidas.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\Piernas.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\PortalGun.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\Serpiente.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\Slime.cs" />
+    <Compile Include="Assets\Scripts\In Game Mechanics\StartActive.cs" />
+    <Compile Include="Assets\Scripts\Parenting\MundoConTienda.cs" />
+    <Compile Include="Assets\Scripts\Parenting\MundoSinTienda.cs" />
+    <Compile Include="Assets\Scripts\Parenting\PassiveMechanics.cs" />
+    <Compile Include="Assets\Scripts\Parenting\StoreObjectsParent.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Pooling.cs" />
+    <Compile Include="Assets\Scripts\Reset.cs" />
+    <Compile Include="Assets\Scripts\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Swipe.cs" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+>>>>>>> master
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>G:/1 Universidad_Taller/Taller 6/Dive_Hard_Repository/Dive Hard Game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
