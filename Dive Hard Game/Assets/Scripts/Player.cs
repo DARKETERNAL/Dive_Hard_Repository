@@ -2,18 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 public class Player : MonoBehaviour
 {
     float venenoTime = 0;
     public float venenoMult = 1;
-<<<<<<< HEAD
 
-=======
->>>>>>> master
 
     private void Update()
     {
