@@ -152,4 +152,10 @@ public class Swipe : PassiveMechanics {
 		starTouch = swipeDelta = Vector2.zero;
 		isDraging = false;
 	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.transform.name == "Sigue PJ")
+			this.enabled = false;
+	}
 }
