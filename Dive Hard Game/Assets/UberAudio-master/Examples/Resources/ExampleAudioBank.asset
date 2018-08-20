@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -40,6 +40,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     SpatialBlend: 1
     ReverbZoneMix: 1
   - EventName: SHOT
@@ -70,6 +71,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     SpatialBlend: 1
     ReverbZoneMix: 1
   - EventName: STATIC_SHOT
@@ -100,6 +102,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     SpatialBlend: 1
     ReverbZoneMix: 1
   - EventName: LASER:SHOT
@@ -129,6 +132,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     SpatialBlend: 1
     ReverbZoneMix: 1
   - EventName: LASER:SHOT
@@ -158,6 +162,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     SpatialBlend: 1
     ReverbZoneMix: 1
   - EventName: DIE_RELEASE_LOOP
@@ -187,6 +192,7 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     SpatialBlend: 1
     ReverbZoneMix: 1
   - EventName: LOOP
@@ -216,5 +222,6 @@ MonoBehaviour:
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
+      m_RotationOrder: 4
     SpatialBlend: 1
     ReverbZoneMix: 1

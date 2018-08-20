@@ -636,6 +636,51 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 320112101}
   m_CullTransparentMesh: 0
+--- !u!1 &335348922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335348924}
+  - component: {fileID: 335348923}
+  m_Layer: 0
+  m_Name: UberAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &335348923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 335348922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7581053e821e2447a8871fadfb265a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LogMissingEvents: 0
+  LogAllEvents: 0
+  LogLookups: 0
+  LogBankLoads: 1
+  LogBankRefCounts: 0
+--- !u!4 &335348924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 335348922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &338362382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,6 +1455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c218414451774084c84a6637518007e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  venenoMult: 1
 --- !u!114 &639705460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1422,8 +1468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storeIndex: 0
-  swipeCounter: {fileID: 1910195641795976, guid: 605e0e048589b854cb45ece6073e8481,
-    type: 2}
+  swipeCounter: {fileID: 0}
   coldDown: 5
   magnitud: 100
   maxCounter: 5
@@ -2992,6 +3037,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1963043264}
   m_CullTransparentMesh: 0
+--- !u!1 &1966191852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966191854}
+  - component: {fileID: 1966191853}
+  m_Layer: 0
+  m_Name: UberAudio BankMounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1966191853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1966191852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2f31d420119645dabd81d7cfc6a5c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BanksToMount:
+  - UberAudioTest
+--- !u!4 &1966191854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1966191852}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1992014487
 GameObject:
   m_ObjectHideFlags: 0
