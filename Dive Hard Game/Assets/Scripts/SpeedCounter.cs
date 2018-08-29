@@ -17,5 +17,9 @@ public class SpeedCounter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		mText.text = (Mathf.Abs((int)mRig.velocity.y * -1)).ToString();
+
+
+		if (Input.GetKey(KeyCode.R))
+			SceneManager.LoadScene(0);
 	}
 }

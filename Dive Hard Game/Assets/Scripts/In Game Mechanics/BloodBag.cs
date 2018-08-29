@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class BloodBag : MundoSinTienda {
 
+    int lim = 0;
+    bool activeDelta;
 
     protected override void Action() //comportamiento pasivo
     {
-
+        if (activeDelta != active)
+        {
+            lim = 0;
+        }
+        activeDelta = active;
     }
 
     protected override IEnumerator Activation(Player _jugador) //comportamiento activo
     {
-        _jugador.bloodInGame += (_jugador.bloodBag * _jugador.venenoMult);
+        if (lim == 0)
+        {
+            _jugador.bloodInGame += (_jugador.bloodBag * _jugador.venenoMult);
+            lim++;
+        }
         yield return null;
     }
 }
