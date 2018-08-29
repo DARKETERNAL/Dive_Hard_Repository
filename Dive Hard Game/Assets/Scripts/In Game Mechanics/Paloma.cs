@@ -21,6 +21,7 @@ public class Paloma : MundoConTienda
     {
         if (lim == 0)
         {
+            _jugador.bloodInGame += (_jugador.paloma * _jugador.venenoMult);
             Rigidbody2D rb = _jugador.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Abs(rb.velocity.y * cantidadAcelerar));
             lim++;

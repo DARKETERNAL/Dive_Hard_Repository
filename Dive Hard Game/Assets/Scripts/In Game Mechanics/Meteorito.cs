@@ -18,7 +18,8 @@ public class Meteorito : MundoConTienda {
 
     protected override IEnumerator Activation(Player _jugador) //comportamiento activo
     {
-		rb = _jugador.GetComponent<Rigidbody2D>();
+        _jugador.bloodInGame += (_jugador.meteoros*_jugador.venenoMult);
+        rb = _jugador.GetComponent<Rigidbody2D>();
 		move = false;
 		transform.parent = _jugador.gameObject.transform;
 		rb.velocity = new Vector2(Mathf.Abs(rb.velocity.x), -1 * Mathf.Abs(rb.velocity.y));
