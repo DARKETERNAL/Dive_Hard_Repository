@@ -65,7 +65,7 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
 
-        if (((-(((GV.y - selectedG.height) * (GV.y - selectedG.height)) * selectedG.inverseRange) + 3 * (selectedG.Probability / 100)) <= 0) || (selectedG.active))
+        if (((-(((GV.y - selectedG.height) * (GV.y - selectedG.height)) * selectedG.inverseRange) + 3 * (selectedG.Probability / 100)) <= 0) || (selectedG.active) || (GV.y <= 0))
         {
             goodBool = true;
             yield break;
@@ -106,7 +106,7 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
 
-        if (((-(((BV.y - selectedB.height) * (BV.y - selectedB.height)) * selectedB.inverseRange) + 3 * (selectedB.Probability / 100)) <= 0) || (selectedB.active))
+        if (((-(((BV.y - selectedB.height) * (BV.y - selectedB.height)) * selectedB.inverseRange) + 3 * (selectedB.Probability / 100)) <= 0) || (selectedB.active) || (BV.y <= 0))
         {
             badBool = true;
             yield break;
