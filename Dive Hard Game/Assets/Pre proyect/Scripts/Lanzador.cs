@@ -15,8 +15,10 @@ public class Lanzador : MonoBehaviour {
 	public float multiplicadorFuerza;
 	float t = 8;
 	float timer = 0;
-	bool on1 = true;
-	public bool on2 = true;
+	bool running = true;
+	bool aim = true;
+	bool oneTimeAim = true;
+	public bool jumping = true;
 	bool click;
 
 	[SerializeField]
@@ -30,6 +32,7 @@ public class Lanzador : MonoBehaviour {
 		swipe = cuerpo.gameObject.GetComponent<Swipe>();
 		swipe.enabled = false;
 		mDirector = GetComponent<PlayableDirector>();
+		GetComponentInChildren<SpriteRenderer>().enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -39,16 +42,22 @@ public class Lanzador : MonoBehaviour {
 
 		if (click)
 		{
-			on1 = false;
+			running = false;
 			mDirector.enabled = true;
 		}
 
 
-		if(on1 == false)
+		if(running == false)
 		{
-			if (t <= 0)
-			{ 
-				Apuntar();
+			
+			if (t < 0)
+			{
+				mText.text = "0.00";
+				if (aim)
+				{
+					Apuntar();
+				}
+				GetComponentInChildren<SpriteRenderer>().enabled = true;
 			}
 			else
 			{
@@ -59,21 +68,20 @@ public class Lanzador : MonoBehaviour {
 			}
 		}
 
-		if(on2 == false)
+		if(jumping == false)
 		{
-			t = 0;
+			
 			if (click)
 			{
-				on1 = true;
-				//mDirector.	
+				running = true;
+				aim = false;
 			}
 		}
-
-		if (mDirector.time >= 9.80)
+		if (mDirector.time > 9.98)
 		{
-			mDirector.enabled = false;
-			cuerpo.simulated = true;
-			Lanzar();
+
+				cuerpo.simulated = true;
+				Lanzar();
 		}
 	}
 
@@ -83,6 +91,7 @@ public class Lanzador : MonoBehaviour {
 		Destroy(GetComponent<Lanzador>());
 		swipe.enabled = true;
 		mText.text = 0.ToString();
+		print(fuerza);
 	}
 
 	void Apuntar()
