@@ -26,6 +26,7 @@ public class Lanzador : MonoBehaviour {
 
 	//Secuencia del principio
 	PlayableDirector mDirector;
+	public SpriteRenderer tapSprite;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +34,9 @@ public class Lanzador : MonoBehaviour {
 		swipe.enabled = false;
 		mDirector = GetComponent<PlayableDirector>();
 		GetComponentInChildren<SpriteRenderer>().enabled = false;
+
+		tapSprite.enabled = false;
+		Invoke("TapSignal", 5);
 	}
 	
 	// Update is called once per frame
@@ -42,6 +46,11 @@ public class Lanzador : MonoBehaviour {
 
 		if (click)
 		{
+			if (IsInvoking("TapSignal"))
+				CancelInvoke("TapSignal");
+
+			tapSprite.enabled = false;
+
 			running = false;
 			mDirector.enabled = true;
 		}
@@ -75,6 +84,7 @@ public class Lanzador : MonoBehaviour {
 			{
 				running = true;
 				aim = false;
+				tapSprite.enabled = false;
 			}
 		}
 		if (mDirector.time > 9.98)
@@ -107,5 +117,10 @@ public class Lanzador : MonoBehaviour {
 			fuerza++;
 			contador.localScale = new Vector3(1, fuerza * 1, 1);
 		}
+	}
+
+	void TapSignal()
+	{
+		tapSprite.enabled = true;
 	}
 }
