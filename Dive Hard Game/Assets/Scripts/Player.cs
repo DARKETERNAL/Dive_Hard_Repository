@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     public void Poison(float poisonTime, float poisonMult)
     {
         venenoTime += poisonTime;
-        if (poisonMult<venenoMult)
+        if (poisonMult < venenoMult)
         {
             venenoMult = poisonMult;
         }
