@@ -13,7 +13,13 @@ public class Player : MonoBehaviour
     float venenoTime = 0;
     public float venenoMult = 1;
 
-    public int bloodBag, licuadora, meteoros, paloma, swipe;
+    [Header("La sangre que da cada uno")]
+    public int bloodBag;
+    public int licuadora;
+    public int meteoros;
+    public int paloma;
+    public int swipe;
+
 
 
     private void Update()
