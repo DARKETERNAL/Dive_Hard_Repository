@@ -15,10 +15,8 @@ public class Lanzador : MonoBehaviour {
 	public float multiplicadorFuerza;
 	float t = 8;
 	float timer = 0;
-	bool running = true;
-	bool aim = true;
-	bool oneTimeAim = true;
-	public bool jumping = true;
+	bool on1 = true;
+	public bool on2 = true;
 	bool click;
 
 	[SerializeField]
@@ -26,17 +24,12 @@ public class Lanzador : MonoBehaviour {
 
 	//Secuencia del principio
 	PlayableDirector mDirector;
-	public SpriteRenderer tapSprite;
 
 	// Use this for initialization
 	void Start () {
 		swipe = cuerpo.gameObject.GetComponent<Swipe>();
 		swipe.enabled = false;
 		mDirector = GetComponent<PlayableDirector>();
-		GetComponentInChildren<SpriteRenderer>().enabled = false;
-
-		tapSprite.enabled = false;
-		Invoke("TapSignal", 5);
 	}
 	
 	// Update is called once per frame
@@ -46,27 +39,16 @@ public class Lanzador : MonoBehaviour {
 
 		if (click)
 		{
-			if (IsInvoking("TapSignal"))
-				CancelInvoke("TapSignal");
-
-			tapSprite.enabled = false;
-
-			running = false;
+			on1 = false;
 			mDirector.enabled = true;
 		}
 
 
-		if(running == false)
+		if(on1 == false)
 		{
-			
-			if (t < 0)
-			{
-				mText.text = "0.00";
-				if (aim)
-				{
-					Apuntar();
-				}
-				GetComponentInChildren<SpriteRenderer>().enabled = true;
+			if (t <= 0)
+			{ 
+				Apuntar();
 			}
 			else
 			{
@@ -77,21 +59,21 @@ public class Lanzador : MonoBehaviour {
 			}
 		}
 
-		if(jumping == false)
+		if(on2 == false)
 		{
-			
+			t = 0;
 			if (click)
 			{
-				running = true;
-				aim = false;
-				tapSprite.enabled = false;
+				on1 = true;
+				//mDirector.	
 			}
 		}
-		if (mDirector.time > 9.98)
-		{
 
-				cuerpo.simulated = true;
-				Lanzar();
+		if (mDirector.time >= 9.80)
+		{
+			mDirector.enabled = false;
+			cuerpo.simulated = true;
+			Lanzar();
 		}
 	}
 
@@ -101,7 +83,6 @@ public class Lanzador : MonoBehaviour {
 		Destroy(GetComponent<Lanzador>());
 		swipe.enabled = true;
 		mText.text = 0.ToString();
-		print(fuerza);
 	}
 
 	void Apuntar()
@@ -117,10 +98,5 @@ public class Lanzador : MonoBehaviour {
 			fuerza++;
 			contador.localScale = new Vector3(1, fuerza * 1, 1);
 		}
-	}
-
-	void TapSignal()
-	{
-		tapSprite.enabled = true;
 	}
 }
