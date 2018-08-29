@@ -34,9 +34,6 @@ public class AltimeterSlider : MonoBehaviour {
 
         altimeter.value = playerTransform.position.y;
         currentAltitude = Mathf.Round(playerTransform.position.y);
-        altimeterText.text = string.Format("{0}m ----", currentAltitude.ToString());
-
-        
-		
+        altimeterText.text = string.Format("{0}m ----", currentAltitude.ToString());	
 	}
 }
