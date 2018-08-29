@@ -124,6 +124,7 @@
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\SpeedCounter.cs" />
     <Compile Include="Assets\Scripts\Swipe.cs" />
+    <Compile Include="Assets\Scripts\World.cs" />
     <Compile Include="Assets\UberAudio-master\AudioBankMounter.cs" />
     <Compile Include="Assets\UberAudio-master\AudioEmitter.cs" />
     <Compile Include="Assets\UberAudio-master\AudioEventBank.cs" />

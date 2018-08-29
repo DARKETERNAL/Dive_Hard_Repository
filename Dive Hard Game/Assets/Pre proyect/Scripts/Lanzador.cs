@@ -101,7 +101,6 @@ public class Lanzador : MonoBehaviour {
 		Destroy(GetComponent<Lanzador>());
 		swipe.enabled = true;
 		mText.text = 0.ToString();
-		print(fuerza);
 	}
 
 	void Apuntar()
