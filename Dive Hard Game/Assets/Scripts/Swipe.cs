@@ -34,7 +34,7 @@ public class Swipe : PassiveMechanics {
 	[SerializeField]
 	public GameObject swipeCounter;
 	Image[] counterSprites = new Image[5];
-	Vector3 counterPos = new Vector3 (-330 , 60 , 0);
+	Vector3 counterPos = new Vector3 (-330 , 120 , 0);
 	Color baseColor;
 
 	bool tap, isUp, isDraging = false;
@@ -114,8 +114,8 @@ public class Swipe : PassiveMechanics {
 		//Pasar la Zona muerta
 		if (swipeDelta.magnitude > 200 && counter > 0)
 		{
-
-			mRB.AddForce(multiplicador*swipeDelta.normalized * magnitud,ForceMode2D.Impulse);
+            GetComponent<Player>().bloodInGame += (GetComponent<Player>().swipe * GetComponent<Player>().venenoMult); //suma sangre 
+            mRB.AddForce(multiplicador*swipeDelta.normalized * magnitud,ForceMode2D.Impulse);
 			counter--;
 			for (int i = counter; i < maxCounter; i++)
 			{

@@ -12,6 +12,7 @@ public class BloodBag : MundoSinTienda {
 
     protected override IEnumerator Activation(Player _jugador) //comportamiento activo
     {
+        _jugador.bloodInGame += (_jugador.bloodBag * _jugador.venenoMult);
         yield return null;
     }
 }
