@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Base path: C:/Program Files/Unity/Hub/Editor/2018.2.3f1/Editor/Data
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -22,6 +23,19 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+=======
+Base path: C:/Program Files/Unity/Editor/Data
+>>>>>>> 121637975385c8f26b796259be39b20196f6ff37
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 121637975385c8f26b796259be39b20196f6ff37
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
@@ -37,8 +51,7 @@ Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
+<<<<<<< HEAD
+=======
+>>>>>>> b66b4edaaed6191bd513ded1bf90d485763eabe7
+>>>>>>> 121637975385c8f26b796259be39b20196f6ff37
