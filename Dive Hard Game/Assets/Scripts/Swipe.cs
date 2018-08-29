@@ -57,7 +57,7 @@ public class Swipe : PassiveMechanics {
 
 		for (int i = 0; i < maxCounter; i++)
 		{
-			GameObject g = Instantiate(swipeCounter,GameObject.Find("Canvas").GetComponent<RectTransform>().position + counterPos - new Vector3(0,counterPos.y / 1.8f ,0)*i,Quaternion.EulerAngles(swipeCounter.transform.rotation.eulerAngles));
+			GameObject g = Instantiate(swipeCounter,GameObject.Find("Canvas").GetComponent<RectTransform>().position + counterPos - new Vector3(0,counterPos.y / 1.8f ,0)*i, Quaternion.identity);
 			g.transform.SetParent(GameObject.Find("Canvas").transform);
 			counterSprites[i] = (g.GetComponent<Image>());
 		}
@@ -158,4 +158,9 @@ public class Swipe : PassiveMechanics {
 		if (collision.transform.name == "Sigue PJ")
 			this.enabled = false;
 	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.name == "Sigue PJ")
+            this.enabled = false;
+    }
 }

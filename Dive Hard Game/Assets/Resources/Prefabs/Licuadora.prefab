@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storeIndex: 0
   active: 0
-  probability: 0
+  probability: 50
   height: 5000
   inverseRange: 0
   offSet: {x: 0, y: 0, z: 0}
