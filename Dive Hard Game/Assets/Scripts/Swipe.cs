@@ -34,7 +34,7 @@ public class Swipe : PassiveMechanics {
 	[SerializeField]
 	public GameObject swipeCounter;
 	Image[] counterSprites = new Image[5];
-	Vector3 counterPos = new Vector3 (-330 , 120 , 0);
+	Vector3 counterPos = new Vector3 (-530 , 120 , 0);
 	Color baseColor;
 
 	bool tap, isUp, isDraging = false;
