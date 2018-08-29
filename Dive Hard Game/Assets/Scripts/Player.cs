@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
             venenoMult = 1;
         }
 
-        bloodText.text = "Blood " + Mathf.Round(bloodInGame);
+        bloodText.text = "Blood: " + Mathf.Round(bloodInGame);
     }
 
     public void Poison(float poisonTime, float poisonMult)
