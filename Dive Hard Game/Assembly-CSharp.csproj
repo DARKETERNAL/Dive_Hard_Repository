@@ -93,6 +93,7 @@
     <Compile Include="Assets\Pre proyect\Scripts\Camara.cs" />
     <Compile Include="Assets\Pre proyect\Scripts\Lanzador.cs" />
     <Compile Include="Assets\Pre proyect\Scripts\SeguidorPJ.cs" />
+    <Compile Include="Assets\Pre proyect\Scripts\SpeedCounter.cs" />
     <Compile Include="Assets\Pre proyect\Scripts\SpriteDinamico.cs" />
     <Compile Include="Assets\Scripts\AltimeterSlider.cs" />
     <Compile Include="Assets\Scripts\Floor.cs" />
@@ -121,7 +122,6 @@
     <Compile Include="Assets\Scripts\Reset.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
-    <Compile Include="Assets\Scripts\SpeedCounter.cs" />
     <Compile Include="Assets\Scripts\Swipe.cs" />
     <Compile Include="Assets\UberAudio-master\AudioBankMounter.cs" />
     <Compile Include="Assets\UberAudio-master\AudioEmitter.cs" />
