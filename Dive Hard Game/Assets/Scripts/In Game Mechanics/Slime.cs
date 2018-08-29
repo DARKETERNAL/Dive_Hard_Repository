@@ -8,18 +8,27 @@ public class Slime : MundoSinTienda {
 
 	[SerializeField]
 	float cantidadFreno = 2;
+    int lim = 0;
+    bool activeDelta;
 
-	protected override void Action() //comportamiento pasivo
+    protected override void Action() //comportamiento pasivo
     {
-
+        if (activeDelta != active)
+        {
+            lim = 0;
+        }
+        activeDelta = active;
     }
 
     protected override IEnumerator Activation(Player _jugador) //comportamiento activo
     {
-		Rigidbody2D rb = _jugador.GetComponent<Rigidbody2D>();
-		rb.velocity = new Vector2(rb.velocity.x / cantidadFreno, rb.velocity.y / cantidadFreno);
-		Destroy(GetComponent<Slime>());
-		//Aqui un sonido
+        if (lim==0)
+        {
+		    Rigidbody2D rb = _jugador.GetComponent<Rigidbody2D>();
+		    rb.velocity = new Vector2(rb.velocity.x / cantidadFreno, rb.velocity.y / cantidadFreno);
+		    //Aqui un sonido
+            lim++;
+        }
 		yield return null;
     }
 }
