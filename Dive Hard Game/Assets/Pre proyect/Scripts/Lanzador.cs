@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class Lanzador : MonoBehaviour {
 
@@ -12,18 +13,23 @@ public class Lanzador : MonoBehaviour {
 	public Text mText;
 	public RectTransform contador;
 	public float multiplicadorFuerza;
-	float t = 5;
+	float t = 8;
 	float timer = 0;
 	bool on1 = true;
-	bool on2 = true;
+	public bool on2 = true;
 	bool click;
 
 	[SerializeField]
 	float velocidad, amplitud, anguloInicio;
+
+	//Secuencia del principio
+	PlayableDirector mDirector;
+
 	// Use this for initialization
 	void Start () {
 		swipe = cuerpo.gameObject.GetComponent<Swipe>();
 		swipe.enabled = false;
+		mDirector = GetComponent<PlayableDirector>();
 	}
 	
 	// Update is called once per frame
@@ -32,27 +38,42 @@ public class Lanzador : MonoBehaviour {
 		click = Input.GetButtonDown("Fire1");
 
 		if (click)
+		{
 			on1 = false;
+			mDirector.enabled = true;
+		}
 
 
 		if(on1 == false)
 		{
-			mText.text = t.ToString();
-			t -= Time.deltaTime;
-
 			if (t <= 0)
-			{
+			{ 
 				Apuntar();
-				StartCoroutine(WaitToLaunch());
 			}
 			else
+			{
 				CalculaFuerza();
+
+				mText.text = System.Math.Round(t, 2).ToString();
+				t -= Time.deltaTime;
+			}
 		}
 
 		if(on2 == false)
 		{
-			if(click)
-				Lanzar();
+			t = 0;
+			if (click)
+			{
+				on1 = true;
+				//mDirector.	
+			}
+		}
+
+		if (mDirector.time >= 9.80)
+		{
+			mDirector.enabled = false;
+			cuerpo.simulated = true;
+			Lanzar();
 		}
 	}
 
@@ -77,12 +98,5 @@ public class Lanzador : MonoBehaviour {
 			fuerza++;
 			contador.localScale = new Vector3(1, fuerza * 1, 1);
 		}
-	}
-
-	IEnumerator WaitToLaunch()
-	{
-		mText.text = "Apuntar!!!!";
-		yield return new WaitForSeconds(1);
-		on2 = false;
 	}
 }
