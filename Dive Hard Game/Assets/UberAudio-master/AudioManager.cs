@@ -383,7 +383,7 @@ namespace UberAudio
             var bank = Resources.Load(bankName, typeof(AudioEventBank)) as AudioEventBank;
             if (bank == null)
             {
-                Debug.Log("Failed to load audio bank " + bankName);
+               // Debug.Log("Failed to load audio bank " + bankName);
                 return;
             }
 

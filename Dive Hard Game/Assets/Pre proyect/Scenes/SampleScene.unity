@@ -1490,7 +1490,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storeIndex: 0
-  swipeCounter: {fileID: 0}
+  swipeCounter: {fileID: 1910195641795976, guid: 6491112010f4b0a43b1f83b12a3d6cc2,
+    type: 2}
   coldDown: 5
   magnitud: 100
   maxCounter: 5
@@ -2184,7 +2185,7 @@ MonoBehaviour:
   mText: {fileID: 1011371268}
   contador: {fileID: 1963043265}
   multiplicadorFuerza: 5
-  velocidad: 1
+  velocidad: 3
   amplitud: 40
   anguloInicio: 90
 --- !u!1 &1226348407
@@ -2941,7 +2942,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1677657075}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 111, y: -168.16, z: 0.9181722}
+  m_LocalPosition: {x: 111, y: -286, z: 0.9181722}
   m_LocalScale: {x: 400, y: 91.68262, z: 1}
   m_Children: []
   m_Father: {fileID: 415612745}
