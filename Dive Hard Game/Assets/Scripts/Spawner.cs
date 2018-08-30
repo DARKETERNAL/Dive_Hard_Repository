@@ -45,7 +45,7 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         Vector2 acF = target.velocity;
         GV = target.transform.position + new Vector3((acF.x * tG) + ((acF.x - acI.x) * (tG) * (tG)) / 2, (acF.y * tG) + ((acF.y - acI.y) * (tG) * (tG)) / 2, 0);
-   
+
         selectedG = null;
         for (int i = 0; i < aspirantG.Length; i++)
         {
@@ -58,19 +58,14 @@ public class Spawner : MonoBehaviour
             if (selectedG == null)
                 selectedG = aspirantG[i];
 
-            if ((-(((GV.y - selectedG.height) * (GV.y - selectedG.height)) * selectedG.inverseRange) + 3) < (-(((GV.y - aspirantG[i].height) * (GV.y - aspirantG[i].height)) * aspirantG[i].inverseRange) + 3))
+            if ((-(((GV.y - selectedG.height) * (GV.y - selectedG.height)) * selectedG.inverseRange) + 3 * (selectedG.Probability / 100f)) < (-(((GV.y - aspirantG[i].height) * (GV.y - aspirantG[i].height)) * aspirantG[i].inverseRange) + 3 * (aspirantG[i].Probability / 100)))
                 if (!aspirantG[i].active)
                     selectedG = aspirantG[i];
 
             yield return new WaitForSeconds(0.01f);
         }
-<<<<<<< HEAD
 
         if (((-(((GV.y - selectedG.height) * (GV.y - selectedG.height)) * selectedG.inverseRange) + 3 * (selectedG.Probability / 100)) <= 0) || (selectedG.active))
-=======
-        
-        if (((-(((GV.y - selectedG.height) * (GV.y - selectedG.height)) * selectedG.inverseRange) + 3) <= 0) || (selectedG.active))
->>>>>>> 7ab2470e887f0cec5290b1efa1d82986b5b7681d
         {
             goodBool = true;
             yield break;
@@ -78,7 +73,7 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         //posible correccion de offsets
         selectedG.transform.position = GV + selectedG.offSet;
-        
+
         selectedG.active = true;
         goodBool = true;
         yield return null;
@@ -90,7 +85,7 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         Vector2 acF = target.velocity;
         BV = target.transform.position + new Vector3((acF.x * tB) + ((acF.x - acI.x) * (tB) * (tB)) / 2, (acF.y * tB) + ((acF.y - acI.y) * (tB) * (tB)) / 2, 0);
-        
+
         selectedB = null;
         for (int i = 0; i < aspirantB.Length; i++)
         {
@@ -103,20 +98,15 @@ public class Spawner : MonoBehaviour
             if (selectedB == null)
                 selectedB = aspirantB[i];
 
-            if ((-(((BV.y - selectedB.height) * (BV.y - selectedB.height)) * selectedB.inverseRange) + 3) < (-(((BV.y - aspirantB[i].height) * (BV.y - aspirantB[i].height)) * aspirantB[i].inverseRange) + 3))
+            if ((-(((BV.y - selectedB.height) * (BV.y - selectedB.height)) * selectedB.inverseRange) + 3 * (selectedB.Probability / 100)) < (-(((BV.y - aspirantB[i].height) * (BV.y - aspirantB[i].height)) * aspirantB[i].inverseRange) + 3 * (aspirantB[i].Probability / 100)))
                 if (!aspirantB[i].active)
                     selectedB = aspirantB[i];
 
 
             yield return new WaitForSeconds(0.01f);
         }
-<<<<<<< HEAD
 
         if (((-(((BV.y - selectedB.height) * (BV.y - selectedB.height)) * selectedB.inverseRange) + 3 * (selectedB.Probability / 100)) <= 0) || (selectedB.active))
-=======
-        
-        if (((-(((BV.y - selectedB.height) * (BV.y - selectedB.height)) * selectedB.inverseRange) + 3) <= 0) || (selectedB.active))
->>>>>>> 7ab2470e887f0cec5290b1efa1d82986b5b7681d
         {
             badBool = true;
             yield break;
@@ -124,7 +114,7 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(0.8f);
         //posible correccion de offsets
         selectedB.transform.position = BV + selectedB.offSet;
-        
+
         selectedB.active = true;
         badBool = true;
         yield return null;

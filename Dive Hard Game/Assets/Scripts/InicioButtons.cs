@@ -14,4 +14,9 @@ public class InicioButtons : MonoBehaviour {
     {
         Application.Quit();
     }
+
+    public void IrAMenu()
+    {
+        SceneManager.LoadScene("MenuInicio");
+    }
 }
