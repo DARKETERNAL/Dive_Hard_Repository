@@ -26,13 +26,15 @@ public class Floor : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate () {
         transform.position = new Vector3(player.transform.position.x, floorHeigth, transform.position.z);
-        if (player.transform.position.y <= floorHeigth)
+        if (player.transform.position.y <= floorHeigth+5)
         {
-            Finalscore = (int)(player.bloodInGame + (Mathf.Abs(playerRig.velocity.y * 1000))); // sujeto a cambios
+            Finalscore = (int)(player.bloodInGame + ((GameObject.Find("trigger").GetComponent<VelocidadFinal>().velFin)/400)); // sujeto a cambios (cambiado por Olarte)v 2.0
 
             playerRig.velocity = Vector2.zero;
             playerRig.angularVelocity = 0;
-            player.transform.position = new Vector3(transform.position.x, transform.position.y, player.transform.position.z);
+            player.transform.position = new Vector3(transform.position.x, transform.position.y+5, player.transform.position.z);
+
+            
             //this coud be change
             StartCoroutine(RestartProtocole());            
         }
@@ -54,5 +56,14 @@ public class Floor : MonoBehaviour {
         //yield return new WaitForFixedUpdate();
         textoPuntaje.text = (Finalscore).ToString();
         yield return null;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            playerRig.velocity = new Vector2((playerRig.velocity.x / 5), Mathf.Abs(playerRig.velocity.y / 10));
+
+        }
     }
 }

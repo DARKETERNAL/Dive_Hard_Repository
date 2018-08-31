@@ -4,17 +4,47 @@ using UnityEngine;
 
 public class World : MonoBehaviour {
 
-    public Sprite este;
-    public GameObject estex2;
+    public Transform[] pool;
+    List<Transform> poolList = new List<Transform>();
+
+    
+    public Transform player;
+    public float spriteWidth;
+
+    [SerializeField]
+    float distanceToSpawn;
+
+    float spriteDistance;
+
+    float distance;
 
 	// Use this for initialization
-	void Start () {
-        for (int i = 0; i < 3; i++)
+	void Start ()
+    {
+        for (int i = 0; i < pool.Length; i++)
         {
-            Vector3 pos = new Vector3(transform.position.x+(300*i), transform.position.y, transform.position.z);
-            Instantiate(estex2,pos,Quaternion.identity);
+            poolList.Add(pool[i]);
         }
-	}
-	
+
+        spriteDistance = (pool.Length * spriteWidth);
+
+    }
+
+
+    private void Update()
+    {
+        distance = player.position.x;
+
+        if (spriteDistance < (distance+(spriteWidth*2)))
+        {
+            int rand = Random.Range(0, 4);
+            Transform temp = poolList[rand];
+            poolList.RemoveAt(rand);
+            temp.position = new Vector3( spriteDistance-(distanceToSpawn) , temp.position.y, temp.position.z);
+            poolList.Add(temp);
+            spriteDistance += spriteWidth;
+        }
+    }
+
 
 }
