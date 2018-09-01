@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UberAudio;
 
 //[RequireComponent(typeof(AudioSource))]
 
@@ -26,7 +27,7 @@ public class Slime : MundoSinTienda {
         {
 		    Rigidbody2D rb = _jugador.GetComponent<Rigidbody2D>();
 		    rb.velocity = new Vector2(rb.velocity.x / cantidadFreno, rb.velocity.y / cantidadFreno);
-		    //Aqui un sonido
+            AudioManager.Instance.Play("Slime");
             lim++;
         }
 		yield return null;

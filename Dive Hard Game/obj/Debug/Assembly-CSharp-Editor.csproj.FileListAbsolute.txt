@@ -216,7 +216,6 @@ C:\Users\ASUS X555Q\Documents\GitHub\Dive_Hard_Repository\Dive Hard Game\Temp\bi
 C:\Users\ASUS X555Q\Documents\GitHub\Dive_Hard_Repository\Dive Hard Game\Temp\bin\Debug\Unity.PackageManagerUI.Editor.dll
 C:\Users\ASUS X555Q\Documents\GitHub\Dive_Hard_Repository\Dive Hard Game\Temp\bin\Debug\Unity.TextMeshPro.dll
 C:\Users\ASUS X555Q\Documents\GitHub\Dive_Hard_Repository\Dive Hard Game\Temp\bin\Debug\Unity.TextMeshPro.Editor.dll
-C:\Users\ASUS X555Q\Documents\GitHub\Dive_Hard_Repository\Dive Hard Game\Temp\bin\Debug\UnityEditor.Advertisements.dll
 C:\Users\ASUS X555Q\Documents\GitHub\Dive_Hard_Repository\Dive Hard Game\Temp\bin\Debug\UnityEditor.Analytics.dll
 C:\Users\ASUS X555Q\Documents\GitHub\Dive_Hard_Repository\Dive Hard Game\Temp\bin\Debug\UnityEditor.Android.Extensions.dll
 C:\Users\ASUS X555Q\Documents\GitHub\Dive_Hard_Repository\Dive Hard Game\Temp\bin\Debug\UnityEditor.dll

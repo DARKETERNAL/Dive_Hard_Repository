@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Playables;
+using UberAudio;
 
 public class Lanzador : MonoBehaviour {
 
@@ -97,10 +98,12 @@ public class Lanzador : MonoBehaviour {
 
 	void Lanzar()
 	{
-		cuerpo.AddForce(puntero.up * -1 * fuerza*multiplicadorFuerza, ForceMode2D.Impulse);
+        AudioManager.Instance.Play("Trampoline");
+        cuerpo.AddForce(puntero.up * -1 * fuerza*multiplicadorFuerza, ForceMode2D.Impulse);
 		Destroy(GetComponent<Lanzador>());
 		swipe.enabled = true;
 		mText.text = 0.ToString();
+        
 	}
 
 	void Apuntar()
