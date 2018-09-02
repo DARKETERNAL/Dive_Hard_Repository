@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 public class Lanzador : MonoBehaviour {
 
@@ -27,6 +28,7 @@ public class Lanzador : MonoBehaviour {
 	//Secuencia del principio
 	PlayableDirector mDirector;
 	public SpriteRenderer tapSprite;
+	public TimelineAsset timeline;
 
 	// Use this for initialization
 	void Start () {
@@ -37,6 +39,10 @@ public class Lanzador : MonoBehaviour {
 
 		tapSprite.enabled = false;
 		Invoke("TapSignal", 5);
+
+
+		timeline.GetOutputTrack(3).muted = false;
+		timeline.GetOutputTrack(4).muted = true;
 	}
 	
 	// Update is called once per frame
@@ -82,6 +88,8 @@ public class Lanzador : MonoBehaviour {
 			
 			if (click)
 			{
+				timeline.GetOutputTrack(3).muted = true;
+				timeline.GetOutputTrack(4).muted = false;
 				running = true;
 				aim = false;
 				tapSprite.enabled = false;
