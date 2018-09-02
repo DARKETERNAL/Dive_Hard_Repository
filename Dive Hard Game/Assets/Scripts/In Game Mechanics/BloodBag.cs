@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UberAudio;
 
 public class BloodBag : MundoSinTienda {
 
@@ -22,6 +23,8 @@ public class BloodBag : MundoSinTienda {
         {
             _jugador.bloodInGame += (_jugador.bloodBag * _jugador.venenoMult);
             lim++;
+            AudioManager.Instance.Play("Bloodbag");
+            BackToPool();
         }
         yield return null;
     }

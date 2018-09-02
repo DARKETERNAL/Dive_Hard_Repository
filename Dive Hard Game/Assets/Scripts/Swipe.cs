@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UberAudio;
 
 #region Propuesta Diego
 //public class Swipe : PassiveMechanics
@@ -117,6 +118,8 @@ public class Swipe : PassiveMechanics {
             GetComponent<Player>().bloodInGame += (GetComponent<Player>().swipe * GetComponent<Player>().venenoMult); //suma sangre 
             mRB.AddForce(multiplicador*swipeDelta.normalized * magnitud,ForceMode2D.Impulse);
 			counter--;
+
+            AudioManager.Instance.Play("Swipe");
 			for (int i = counter; i < maxCounter; i++)
 			{
 				counterSprites[i].color = new Color(baseColor.r, baseColor.g, baseColor.b, 0);
@@ -124,7 +127,7 @@ public class Swipe : PassiveMechanics {
 			Reset();
 		}
 
-		//ColdDown
+		//CooldDown
 		if(counter < maxCounter)
 		{
 			if(!isUp)
