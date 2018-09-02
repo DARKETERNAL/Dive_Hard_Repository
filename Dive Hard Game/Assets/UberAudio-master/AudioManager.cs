@@ -389,7 +389,7 @@ namespace UberAudio
 
             if (LogBankLoads)
             {
-                Debug.Log("Loading bank " + bankName);
+                //Debug.Log("Loading bank " + bankName);
             }
 
         

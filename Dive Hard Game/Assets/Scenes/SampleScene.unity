@@ -321,7 +321,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.16, y: 0.11}
   m_EdgeRadius: 0
 --- !u!1 &58254787
 GameObject:
@@ -1769,7 +1769,6 @@ GameObject:
   - component: {fileID: 639705456}
   - component: {fileID: 639705454}
   - component: {fileID: 639705461}
-  - component: {fileID: 639705458}
   - component: {fileID: 639705457}
   - component: {fileID: 639705455}
   - component: {fileID: 639705459}
@@ -1949,17 +1948,6 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 229c65b49fe387c47a761751ab7a1b61, type: 3}
   - {fileID: 21300000, guid: 2b3112f3f4578114fb9ed49d21322e12, type: 3}
---- !u!114 &639705458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 639705452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dbb5a7729f94684ab706644c55f37e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &639705459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1996,6 +1984,8 @@ MonoBehaviour:
   coldDown: 5
   magnitud: 99.99
   maxCounter: 5
+  BloodParticles: {fileID: 1682618923521516, guid: ff564dbbd0ede3a4697970c801b0a891,
+    type: 2}
 --- !u!114 &639705461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9475,7 +9465,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2089704231}
   - component: {fileID: 2089704230}
-  - component: {fileID: 2089704232}
   - component: {fileID: 2089704233}
   m_Layer: 0
   m_Name: Portal 1
@@ -9543,17 +9532,6 @@ Transform:
   m_Father: {fileID: 1684204112}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 98.165}
---- !u!114 &2089704232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2089704229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6adecb9c7262f7a449a49ef40bfc900d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2089704233
 BoxCollider2D:
   m_ObjectHideFlags: 0

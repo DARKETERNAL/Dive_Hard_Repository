@@ -11,11 +11,13 @@ public abstract class MundoConTienda : StoreObjectsParent
     public Vector3 offSet;
     public float Probability { get { return probability; } set { probability = Mathf.Clamp(value, 0, 50); } }
 
-
+	[SerializeField]
+	GameObject BloodParticles;
 
     bool counting;
     float maxPoolingDistance;
     Vector3 player;
+
     private void Start()
     {
         // float t = (ActualLevel / 2f);
@@ -35,11 +37,30 @@ public abstract class MundoConTienda : StoreObjectsParent
     {
         yield return null;
     }
+
+	protected void BloodSplash(float spawTime , float fuerzaDeLanzamiento , int cantidadDeParticulas,Transform player)
+	{
+		GameObject blood =  Instantiate(BloodParticles, player.position , Quaternion.identity);
+		ParticleSystem particle = blood.GetComponent<ParticleSystem>();
+
+
+		print(blood.transform.position);
+		particle.startSpeed = fuerzaDeLanzamiento;
+		particle.emission.SetBurst(0, new ParticleSystem.Burst(0, (short)cantidadDeParticulas , (short)cantidadDeParticulas , 1 , 0.010f));
+
+		if (!particle.isPlaying)
+			particle.Play();
+
+		Destroy(blood, spawTime);
+	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (active)
-            if (collision.GetComponent<Player>() != null)
-                StartCoroutine(Activation(collision.GetComponent<Player>()));
+		if (active)
+			if (collision.GetComponent<Player>() != null)
+			{
+				StartCoroutine(Activation(collision.GetComponent<Player>()));
+				BloodSplash(10,100,250 , collision.transform);
+			}
     }
     protected void BackToPool()
     {

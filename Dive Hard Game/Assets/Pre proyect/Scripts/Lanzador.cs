@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Playables;
-<<<<<<< HEAD
 using UnityEngine.Timeline;
-=======
 using UberAudio;
->>>>>>> 401da9050990f8b156183e44404e3743f1003429
 
 public class Lanzador : MonoBehaviour {
 

@@ -4,7 +4,9 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - swipeCounter: {fileID: 1910195641795976, guid: 605e0e048589b854cb45ece6073e8481,
+  - swipeCounter: {fileID: 1910195641795976, guid: 6491112010f4b0a43b1f83b12a3d6cc2,
+      type: 2}
+  - BloodParticles: {fileID: 1682618923521516, guid: ff564dbbd0ede3a4697970c801b0a891,
       type: 2}
   executionOrder: 0
   icon: {instanceID: 0}

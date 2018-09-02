@@ -51,6 +51,9 @@ public class Swipe : PassiveMechanics {
 	Vector2 starTouch, swipeDelta;
 	Rigidbody2D mRB;
 
+	[SerializeField]
+	GameObject BloodParticles;
+
 	protected override void Execution()
 	{
 		mRB = GetComponent<Rigidbody2D>();
@@ -118,8 +121,9 @@ public class Swipe : PassiveMechanics {
             GetComponent<Player>().bloodInGame += (GetComponent<Player>().swipe * GetComponent<Player>().venenoMult); //suma sangre 
             mRB.AddForce(multiplicador*swipeDelta.normalized * magnitud,ForceMode2D.Impulse);
 			counter--;
+			BloodSplash(10, 100, 250, transform);
 
-            AudioManager.Instance.Play("Swipe");
+			AudioManager.Instance.Play("Swipe");
 			for (int i = counter; i < maxCounter; i++)
 			{
 				counterSprites[i].color = new Color(baseColor.r, baseColor.g, baseColor.b, 0);
@@ -160,10 +164,27 @@ public class Swipe : PassiveMechanics {
 	{
 		if (collision.transform.name == "Sigue PJ")
 			this.enabled = false;
+
 	}
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.name == "Sigue PJ")
             this.enabled = false;
     }
+
+	protected void BloodSplash(float spawTime, float fuerzaDeLanzamiento, int cantidadDeParticulas, Transform player)
+	{
+		GameObject blood = Instantiate(BloodParticles, player.position, Quaternion.identity);
+		ParticleSystem particle = blood.GetComponent<ParticleSystem>();
+
+
+		print(blood.transform.position);
+		particle.startSpeed = fuerzaDeLanzamiento;
+		particle.emission.SetBurst(0, new ParticleSystem.Burst(0, (short)cantidadDeParticulas, (short)cantidadDeParticulas, 1, 0.010f));
+
+		if (!particle.isPlaying)
+			particle.Play();
+
+		Destroy(blood, spawTime);
+	}
 }
