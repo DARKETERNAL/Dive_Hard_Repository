@@ -21,6 +21,7 @@ public class Lanzador : MonoBehaviour {
 	bool aim = true;
 	bool oneTimeAim = true;
 	public bool jumping = true;
+	public bool canClic;
 	bool click;
 
 	[SerializeField]
@@ -29,7 +30,7 @@ public class Lanzador : MonoBehaviour {
 	//Secuencia del principio
 	PlayableDirector mDirector;
 	public SpriteRenderer tapSprite;
-	public TimelineAsset timeline;
+	int fastForward;
 
 	// Use this for initialization
 	void Start () {
@@ -38,21 +39,31 @@ public class Lanzador : MonoBehaviour {
 		mDirector = GetComponent<PlayableDirector>();
 		GetComponentInChildren<SpriteRenderer>().enabled = false;
 
-		tapSprite.enabled = false;
+		tapSprite.enabled = true;
 		Invoke("TapSignal", 5);
-
-
-		timeline.GetOutputTrack(3).muted = false;
-		timeline.GetOutputTrack(4).muted = true;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
+		//TimelineFixer
+		if (fastForward == 0)
+			Time.timeScale = 1;
+
+		if (fastForward == 1)
+			Time.timeScale = 2;
+
+		if (fastForward == 2)
+			Time.timeScale = 0.3f;
+
+
+		print(Time.timeScale);
 		click = Input.GetButtonDown("Fire1");
 
 		if (click)
 		{
+
+
 			if (IsInvoking("TapSignal"))
 				CancelInvoke("TapSignal");
 
@@ -65,7 +76,7 @@ public class Lanzador : MonoBehaviour {
 
 		if(running == false)
 		{
-			
+			fastForward = 1;
 			if (t < 0)
 			{
 				mText.text = "0.00";
@@ -86,21 +97,28 @@ public class Lanzador : MonoBehaviour {
 
 		if(jumping == false)
 		{
-			
-			if (click)
+			if (canClic)
 			{
-				timeline.GetOutputTrack(3).muted = true;
-				timeline.GetOutputTrack(4).muted = false;
-				running = true;
-				aim = false;
-				tapSprite.enabled = false;
+				if (click)
+				{
+					running = true;
+					aim = false;
+					tapSprite.enabled = false;
+					fastForward = 1;
+				}
 			}
+				if (aim == false)
+					fastForward = 1;
+				else
+					fastForward = 2;
+			
 		}
 		if (mDirector.time > 9.98)
 		{
 
 				cuerpo.simulated = true;
 				Lanzar();
+			fastForward = 0;
 		}
 	}
 
@@ -111,7 +129,7 @@ public class Lanzador : MonoBehaviour {
 		Destroy(GetComponent<Lanzador>());
 		swipe.enabled = true;
 		mText.text = 0.ToString();
-        
+
 	}
 
 	void Apuntar()
