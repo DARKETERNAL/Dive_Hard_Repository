@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,11 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 685
+<<<<<<< HEAD
   m_MinSize: {x: 950, y: 300}
+=======
+  m_MinSize: {x: 950, y: 521}
+>>>>>>> 5b701b2efae2b55916d80aba5c212c2b9f9a4482
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -107,10 +111,14 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 713, y: 471}
+  m_MaxSize: {x: 18008, y: 14021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 16816
+=======
+  controlID: 36
+>>>>>>> 5b701b2efae2b55916d80aba5c212c2b9f9a4482
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -131,10 +139,14 @@ MonoBehaviour:
     y: 0
     width: 855
     height: 635
-  m_MinSize: {x: 202, y: 342}
+  m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 16850
+=======
+  controlID: 89
+>>>>>>> 5b701b2efae2b55916d80aba5c212c2b9f9a4482
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,14 +165,20 @@ MonoBehaviour:
     y: 0
     width: 855
     height: 414
+<<<<<<< HEAD
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
+=======
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
+>>>>>>> 5b701b2efae2b55916d80aba5c212c2b9f9a4482
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -206,10 +224,14 @@ MonoBehaviour:
     y: 0
     width: 234
     height: 635
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 234, y: 471}
+  m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
+<<<<<<< HEAD
   controlID: 16817
+=======
+  controlID: 122
+>>>>>>> 5b701b2efae2b55916d80aba5c212c2b9f9a4482
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -523,10 +545,9 @@ MonoBehaviour:
     - Assets/Resources
   m_ViewMode: 0
   m_StartGridSize: 64
-  m_LastFolders:
-  - Assets
+  m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\seb_3\Desktop\Semestre 6\Taller 6\Dive_Hard_Repository\Dive
+  m_LastProjectPath: C:\Users\ASUS X555Q\Documents\GitHub\Dive_Hard_Repository\Dive
     Hard Game
   m_LockTracker:
     m_IsLocked: 0
@@ -534,7 +555,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 242b0000
     m_LastClickedID: 11044
+<<<<<<< HEAD
     m_ExpandedIDs: ffffffff00000000d42a0000da2a0000f82a0000022b0000062b0000422b0000462b0000582b0000682b0000702b00007a2b00007e2b0000822b0000862b0000bc2b0000ce2b0000d02b0000d22b0000da2b0000f22b0000fe2b0000062c0000082c0000102c00002c2c0000302c0000382c00005c2c00005e2c0000622c00009a2c0000a82c0000aa2c0000ac2c0000b22c0000d02c00002e2d00005e2d0000622d0000682d00006e2d0000882d0000942d0000962d0000ae2d0000b42d0000b82d0000ce2d0000da2d0000ea2d00001a2e00001e2e0000402e0000422e0000442e0000822e0000962e00009c2e00009e2e0000b42e0000b62e0000ee2e0000f22e0000fc2e00000a2f0000162f0000322f00003a2f00004e2f0000602f00001a320000
+=======
+    m_ExpandedIDs: 00000000942e0000cc2f0000d22f0000ec2f0000f62f0000fa2f0000323000003630000046300000563000005e300000683000006c3000007030000074300000aa300000bc300000be300000c0300000c8300000ec300000f4300000f6300000183100001c310000243100004031000042310000463100007831000082310000863100008c310000aa310000043200002c32000030320000363200003c320000563200005a3200005c3200005e320000763200007c3200008032000096320000a2320000b2320000de320000e232000004330000063300000833000044330000583300005e330000603300007633000078330000b0330000b4330000c8330000d4330000ee330000f633000006340000163400003c360000
+>>>>>>> 5b701b2efae2b55916d80aba5c212c2b9f9a4482
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -559,10 +584,14 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
+    scrollPos: {x: 0, y: 67.60883}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: ffffffff00000000d42a0000da2a0000f82a0000022b0000062b0000422b0000462b0000582b0000682b0000702b00007a2b00007e2b0000822b0000862b0000bc2b0000ce2b0000d02b0000d22b0000da2b0000f22b0000fe2b0000062c0000082c0000102c00002c2c0000302c0000382c00005c2c00005e2c0000622c00009a2c0000a82c0000aa2c0000ac2c0000b22c0000d02c00002e2d00005e2d0000622d0000682d00006e2d0000882d0000942d0000962d0000ae2d0000b42d0000b82d0000ce2d0000da2d0000ea2d00001a2e00001e2e0000402e0000422e0000442e0000822e0000962e00009c2e00009e2e0000b42e0000b62e0000ee2e0000f22e0000fc2e00000a2f0000162f0000322f00003a2f00004e2f0000602f00001a320000
+=======
+    m_ExpandedIDs: ffffffff00000000942e0000cc2f0000d22f0000ec2f0000fa2f0000323000003630000046300000563000005e300000683000006c3000007030000074300000aa300000bc300000c0300000c8300000ec300000f6300000183100001c310000243100004231000046310000823100008431000086310000aa310000043200002c32000030320000363200003c320000563200005a3200005e3200007c32000096320000a2320000b2320000e232000004330000063300000833000044330000583300005e330000603300007633000078330000b0330000b4330000c8330000d4330000f6330000063400003c360000
+>>>>>>> 5b701b2efae2b55916d80aba5c212c2b9f9a4482
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -643,10 +672,17 @@ MonoBehaviour:
     height: 206
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: ae5ef9ffc05ef9fff0b2fbff98b4fbff66b5fbff22b7fbff34b7fbff84e9fbff3eebfbff12ecfbffd0edfbffe6edfbff704afeff1a4cfeffea4cfeffa44efeffb64efeffe6fbffff00000000623000006c3000009e300000043100006e310000a231000020720000d6960000ce970000
+=======
+    scrollPos: {x: 0, y: 35}
+    m_SelectedIDs: 7e340000
+    m_LastClickedID: 13438
+    m_ExpandedIDs: 7af7ffff00000000
+>>>>>>> 5b701b2efae2b55916d80aba5c212c2b9f9a4482
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
