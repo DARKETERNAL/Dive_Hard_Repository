@@ -8,7 +8,8 @@ public class Camara : MonoBehaviour {
 	Vector3 posCuerpo;
 	// Use this for initialization
 	void Start () {
-		
+		if (cuerpo == null)
+			cuerpo = GameObject.Find("Player").GetComponent<Transform>(); 
 	}
 	
 	// Update is called once per frame

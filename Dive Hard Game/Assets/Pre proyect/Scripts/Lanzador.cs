@@ -31,6 +31,8 @@ public class Lanzador : MonoBehaviour {
 	PlayableDirector mDirector;
 	public SpriteRenderer tapSprite;
 	int fastForward;
+	public float sizeScale = 1;
+
 
 	// Use this for initialization
 	void Start () {
@@ -56,8 +58,6 @@ public class Lanzador : MonoBehaviour {
 		if (fastForward == 2)
 			Time.timeScale = 0.3f;
 
-
-		print(Time.timeScale);
 		click = Input.GetButtonDown("Fire1");
 
 		if (click)
@@ -113,7 +113,8 @@ public class Lanzador : MonoBehaviour {
 					fastForward = 2;
 			
 		}
-		if (mDirector.time > 9.98)
+
+		if (mDirector.time > 9.90)
 		{
 
 				cuerpo.simulated = true;
@@ -129,7 +130,7 @@ public class Lanzador : MonoBehaviour {
 		Destroy(GetComponent<Lanzador>());
 		swipe.enabled = true;
 		mText.text = 0.ToString();
-
+		Time.timeScale = 1;
 	}
 
 	void Apuntar()
@@ -143,7 +144,9 @@ public class Lanzador : MonoBehaviour {
 		if (click)
 		{
 			fuerza++;
-			contador.localScale = new Vector3(1, fuerza * 1, 1);
+			contador.sizeDelta = new Vector2(67,sizeScale *  fuerza);
+			contador.anchoredPosition = new Vector2(-160, 5 + (  sizeScale * fuerza/2));
+
 		}
 	}
 

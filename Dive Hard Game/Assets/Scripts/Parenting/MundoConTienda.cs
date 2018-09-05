@@ -41,6 +41,7 @@ public abstract class MundoConTienda : StoreObjectsParent
 	protected void BloodSplash(float spawTime , float fuerzaDeLanzamiento , int cantidadDeParticulas,Transform player)
 	{
 		GameObject blood =  Instantiate(BloodParticles, player.position , Quaternion.identity);
+
 		ParticleSystem particle = blood.GetComponent<ParticleSystem>();
 
 		particle.startSpeed = fuerzaDeLanzamiento;

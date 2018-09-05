@@ -17,7 +17,7 @@ public class Singleton : MonoBehaviour
         }      
         else
             Destroy(transform.gameObject);
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        Screen.orientation = ScreenOrientation.LandscapeRight;
 
         Screen.SetResolution(1280, 720, true);
     }

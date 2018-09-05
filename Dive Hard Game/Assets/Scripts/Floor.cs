@@ -10,12 +10,15 @@ public class Floor : MonoBehaviour {
     float floorHeigth = 0;
     Player player;
     Rigidbody2D playerRig;
-    int Finalscore;
+    int finalScore;
     [SerializeField]
     GameObject restartMenu;
     [SerializeField]
     TextMeshProUGUI textoPuntaje;
-    private void Start()
+	public GameObject BloodParticles;
+
+	bool itCollide;
+	private void Start()
     {
         
         player = GameObject.Find("Player").GetComponent<Player>() ;
@@ -28,7 +31,7 @@ public class Floor : MonoBehaviour {
         transform.position = new Vector3(player.transform.position.x, floorHeigth, transform.position.z);
         if (player.transform.position.y <= floorHeigth+5)
         {
-            Finalscore = (int)(player.bloodInGame + ((GameObject.Find("trigger").GetComponent<VelocidadFinal>().velFin)/400)); // sujeto a cambios (cambiado por Olarte)v 2.0
+            finalScore = (int)(player.bloodInGame + ((GameObject.Find("trigger").GetComponent<VelocidadFinal>().velFin)/400)); // sujeto a cambios (cambiado por Olarte)v 2.0
 
             playerRig.velocity = Vector2.zero;
             playerRig.angularVelocity = 0;
@@ -54,16 +57,39 @@ public class Floor : MonoBehaviour {
         //yield return new WaitForFixedUpdate();
         //textoPuntaje.text = ((int)(Finalscore * 3 / 4f)).ToString();
         //yield return new WaitForFixedUpdate();
-        textoPuntaje.text = (Finalscore).ToString();
+        textoPuntaje.text = (finalScore).ToString();
         yield return null;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+	protected void BloodSplash(float spawTime, float fuerzaDeLanzamiento, int cantidadDeParticulas, Transform player)
+	{
+		GameObject blood = Instantiate(BloodParticles, player.position, Quaternion.identity);
+		ParticleSystem particle = blood.GetComponent<ParticleSystem>();
+
+		particle.startSpeed = fuerzaDeLanzamiento;
+		particle.emission.SetBurst(0, new ParticleSystem.Burst(0, (short)cantidadDeParticulas, (short)cantidadDeParticulas, 1, 0.010f));
+
+		if (!particle.isPlaying)
+			particle.Play();
+
+		Destroy(blood, spawTime);
+	}
+
+
+	private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            playerRig.velocity = new Vector2((playerRig.velocity.x / 5), Mathf.Abs(playerRig.velocity.y / 10));
+			int score = (int)(player.bloodInGame + ((GameObject.Find("trigger").GetComponent<VelocidadFinal>().velFin) / 400));
 
-        }
+			playerRig.velocity = new Vector2((playerRig.velocity.x / 5), Mathf.Abs(playerRig.velocity.y / 10));
+
+			if (!itCollide)
+			{
+				BloodSplash(10, playerRig.velocity.y * 10, score * 5, player.transform);
+				itCollide = true;
+			}
+		}
     }
 }

@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 
     public TextMeshProUGUI bloodText;
 
-    public float bloodInGame = 0;
+	public float bloodInGame = 0;
 
     float venenoTime = 0;
     public float venenoMult = 1;
@@ -44,4 +44,5 @@ public class Player : MonoBehaviour
             venenoMult = poisonMult;
         }
     }
+
 }

@@ -45,7 +45,7 @@ MonoBehaviour:
   - EventName: Trampoline
     RandomWeight: 1
     Volume: 1
-    AudioClip: {fileID: 8300000, guid: 6c2f941d656cdc647a735c95fdf87019, type: 3}
+    AudioClip: {fileID: 8300000, guid: f9ed888b39b775148aa32a8387b5e7ad, type: 3}
     Priority: 128
     GroupID: 0
     Loop: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
   - EventName: Slime
     RandomWeight: 1
     Volume: 1
-    AudioClip: {fileID: 8300000, guid: fa2280f9a95dd064485dd853cf66b8c3, type: 3}
+    AudioClip: {fileID: 8300000, guid: 8fc71465de4a69a48abe94887a3cf51f, type: 3}
     Priority: 128
     GroupID: 0
     Loop: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   - EventName: Bloodbag
     RandomWeight: 1
     Volume: 1
-    AudioClip: {fileID: 8300000, guid: 9c06f62bcfac62e45b29bcf115ed12f7, type: 3}
+    AudioClip: {fileID: 8300000, guid: bf435d17dee8f484380d7ac4ec025299, type: 3}
     Priority: 128
     GroupID: 0
     Loop: 0
