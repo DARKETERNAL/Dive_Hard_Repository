@@ -107,7 +107,7 @@ public class Spawner : MonoBehaviour
         //posible correccion de offsets
         selectedG.transform.position = GV + selectedG.offSet + new Vector3(-target.velocity.x * .8f, 0, 0);
         selectedG.selfR.simulated = true;
-        selectedG.selfR.velocity = new Vector2(target.velocity.x * 0.8f, 0);
+        selectedG.selfR.velocity = new Vector2(target.velocity.x * 0.98f, 0);
         selectedG.active = true;
         goodBool = true;
         yield return null;
@@ -181,7 +181,7 @@ public class Spawner : MonoBehaviour
         //posible correccion de offsets
         selectedB.transform.position = BV + selectedB.offSet + new Vector3(-target.velocity.x * .8f, 0, 0);
         selectedB.selfR.simulated = true;
-        selectedB.selfR.velocity = new Vector2(target.velocity.x * 0.8f, 0);
+        selectedB.selfR.velocity = new Vector2(target.velocity.x * 0.98f, 0);
         selectedB.active = true;
         badBool = true;
         yield return null;
