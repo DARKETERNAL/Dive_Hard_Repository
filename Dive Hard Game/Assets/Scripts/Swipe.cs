@@ -180,11 +180,11 @@ public class Swipe : PassiveMechanics {
         {
             if (hasSwiped == false)
             {
-                yield return new WaitForSeconds(3);
-                swipeAnim.enabled = true;
             }
         }
         
+        yield return new WaitForSeconds(3);
+        swipeAnim.enabled = true;
     }
 
 	private void Reset()
