@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212949833483395124}
   - component: {fileID: 58271087505605540}
   - component: {fileID: 114431096440822314}
+  - component: {fileID: 50062508302394352}
   m_Layer: 0
   m_Name: Paracaidas
   m_TagString: Untagged
@@ -42,6 +43,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50062508302394352
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1357727729189232}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0.01
+  m_AngularDrag: 0.05
+  m_GravityScale: -0.02
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &58271087505605540
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -76,6 +97,8 @@ MonoBehaviour:
   offSet: {x: 0, y: 0, z: 0}
   BloodParticles: {fileID: 1682618923521516, guid: ff564dbbd0ede3a4697970c801b0a891,
     type: 2}
+  pobRange: {x: 0, y: 0}
+  selfR: {fileID: 0}
   cantidadFrenar: 2
 --- !u!212 &212949833483395124
 SpriteRenderer:

@@ -20,5 +20,7 @@ public class Singleton : MonoBehaviour
         Screen.orientation = ScreenOrientation.LandscapeRight;
 
         Screen.SetResolution(1280, 720, true);
+
+        
     }
 }

@@ -178,7 +178,7 @@ public class Swipe : PassiveMechanics {
 		ParticleSystem particle = blood.GetComponent<ParticleSystem>();
 
 
-		print(blood.transform.position);
+
 		particle.startSpeed = fuerzaDeLanzamiento;
 		particle.emission.SetBurst(0, new ParticleSystem.Burst(0, (short)cantidadDeParticulas, (short)cantidadDeParticulas, 1, 0.010f));
 

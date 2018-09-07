@@ -43,7 +43,9 @@ public class Lanzador : MonoBehaviour {
 
 		tapSprite.enabled = true;
 		Invoke("TapSignal", 5);
-	}
+
+
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -145,7 +147,7 @@ public class Lanzador : MonoBehaviour {
 		{
 			fuerza++;
 			contador.sizeDelta = new Vector2(67,sizeScale *  fuerza);
-			contador.anchoredPosition = new Vector2(-160, 5 + (  sizeScale * fuerza/2));
+			contador.anchoredPosition = new Vector2(-160,  (  sizeScale * fuerza/2));
 
 		}
 	}

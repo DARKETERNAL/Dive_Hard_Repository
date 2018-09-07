@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212949833483395124}
   - component: {fileID: 58271087505605540}
   - component: {fileID: 114313727862539450}
+  - component: {fileID: 50407255270095930}
   m_Layer: 0
   m_Name: Serpiente
   m_TagString: Untagged
@@ -42,6 +43,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50407255270095930
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1357727729189232}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0.01
+  m_AngularDrag: 0.05
+  m_GravityScale: -0.02
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &58271087505605540
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -70,12 +91,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storeIndex: 0
   active: 0
-  probability: 50
+  probability: 12
   height: 7000
   inverseRange: 0
   offSet: {x: 0, y: 0, z: 0}
   BloodParticles: {fileID: 1682618923521516, guid: ff564dbbd0ede3a4697970c801b0a891,
     type: 2}
+  pobRange: {x: 0, y: 0}
+  selfR: {fileID: 0}
   poisonTime: 10
   poisonMult: 0.5
 --- !u!212 &212949833483395124

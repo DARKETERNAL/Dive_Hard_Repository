@@ -6,20 +6,25 @@ public abstract class MundoConTienda : StoreObjectsParent
 {
     public bool active;
     [SerializeField]
-    float probability;
+    int probability;
     public float height, inverseRange = 0.02f;
     public Vector3 offSet;
-    public float Probability { get { return probability; } set { probability = Mathf.Clamp(value, 0, 50); } }
+    public int Probability { get { return probability; } set { probability = Mathf.Clamp(value, 0, 50); } }
 
 	[SerializeField]
 	GameObject BloodParticles;
 
     bool counting;
     float maxPoolingDistance;
-    Vector3 player;
+    Transform player;
+    public Vector2 pobRange;
 
+    public Rigidbody2D selfR;
     private void Start()
     {
+        player = GameObject.Find("Player").GetComponent<Transform>();
+        selfR = GetComponent<Rigidbody2D>();
+        selfR.simulated = false;
         // float t = (ActualLevel / 2f);
         // Probability *= t;
     }
@@ -64,19 +69,20 @@ public abstract class MundoConTienda : StoreObjectsParent
     protected void BackToPool()
     {
         active = false;
+        
         counting = false;
         transform.position = new Vector3(-500, -500, 0);
+        selfR.velocity = Vector2.zero;
+        selfR.simulated = false;
     }
      void DistancePooling()
-    {
-        player = GameObject.Find("Player").GetComponent<Transform>().position;
+    {       
         if (!counting)
-        {
-            
-            maxPoolingDistance = Vector3.Distance(transform.position, player) + 1;
+        {         
+            maxPoolingDistance = Vector3.Distance(transform.position, player.position) + 1;
         }
         counting = true;
-        if (Vector3.Distance(transform.position, player) > maxPoolingDistance)
+        if (Vector3.Distance(transform.position, player.position) > maxPoolingDistance)
         {
             BackToPool();
         }

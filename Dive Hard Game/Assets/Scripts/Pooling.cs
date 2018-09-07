@@ -7,10 +7,12 @@ public class Pooling : MonoBehaviour
 
     public MundoConTienda[] poolGood;
     public MundoSinTienda[] poolBad;
+    public int maxProbG, maxProbB;
 
     // Use this for initialization
     void Awake()
     {
+
         MundoConTienda[] tempPoolGood = Resources.LoadAll<MundoConTienda>("Prefabs");
         MundoSinTienda[] tempPoolBad = Resources.LoadAll<MundoSinTienda>("Prefabs");
 
@@ -20,6 +22,8 @@ public class Pooling : MonoBehaviour
             for (int j = 0; j < tempPoolGood.Length; j++)
             {
                 poolGood[i + j] = Instantiate(tempPoolGood[j], new Vector3(-500, -500, 0), Quaternion.identity);
+                poolGood[i + j].pobRange = new Vector2(maxProbG, maxProbG + poolGood[i + j].Probability - 1);
+                maxProbG += poolGood[i + j].Probability;
             }
         }
         poolBad = new MundoSinTienda[tempPoolBad.Length * 3];
@@ -28,6 +32,8 @@ public class Pooling : MonoBehaviour
             for (int j = 0; j < tempPoolBad.Length; j++)
             {
                 poolBad[i + j] = Instantiate(tempPoolBad[j], new Vector3(-500, -500, 0), Quaternion.identity);
+                poolBad[i + j].pobRange = new Vector2(maxProbB,maxProbB + poolBad[i + j].Probability - 1);
+                maxProbB += poolBad[i + j].Probability;
             }
         }
     }
