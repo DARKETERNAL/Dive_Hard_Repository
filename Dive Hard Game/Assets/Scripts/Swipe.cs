@@ -54,6 +54,11 @@ public class Swipe : PassiveMechanics {
 	[SerializeField]
 	GameObject BloodParticles;
 
+    //Animacion Instrucciones
+    Animator swipeAnim;
+    bool hasSwiped = false;
+    Lanzador lanzador;
+
 	protected override void Execution()
 	{
 		mRB = GetComponent<Rigidbody2D>();
@@ -68,7 +73,14 @@ public class Swipe : PassiveMechanics {
 		baseColor = counterSprites[0].color;
 	}
 
-	private void Update()
+    void Start()
+    {
+        swipeAnim = GetComponent<Animator>();
+        lanzador = GameObject.Find("Flecha").GetComponent<Lanzador>();
+        StartCoroutine("SwipeInstruction");
+    }
+
+    void Update()
 	{		
 		tap = false;
 
@@ -151,8 +163,29 @@ public class Swipe : PassiveMechanics {
 			}
 		}
 
-		//print(counter);
+        //print(counter);
+
+        if(swipeAnim.enabled == true)
+        {
+            swipeAnim.enabled = false;
+        }
+        
+        
+        
 	}
+
+    IEnumerator SwipeInstruction()
+    {
+        if (lanzador.launched == true)
+        {
+            if (hasSwiped == false)
+            {
+                yield return new WaitForSeconds(3);
+                swipeAnim.enabled = true;
+            }
+        }
+        
+    }
 
 	private void Reset()
 	{

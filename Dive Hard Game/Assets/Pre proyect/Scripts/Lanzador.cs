@@ -23,6 +23,7 @@ public class Lanzador : MonoBehaviour {
 	public bool jumping = true;
 	public bool canClic;
 	bool click;
+    public bool launched = false;
 
 	[SerializeField]
 	float velocidad, amplitud, anguloInicio;
@@ -133,6 +134,7 @@ public class Lanzador : MonoBehaviour {
 		swipe.enabled = true;
 		mText.text = 0.ToString();
 		Time.timeScale = 1;
+        launched = true;
 	}
 
 	void Apuntar()
