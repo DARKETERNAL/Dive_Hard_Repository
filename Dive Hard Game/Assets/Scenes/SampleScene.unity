@@ -2785,7 +2785,7 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 993887764}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 941528b16c55d7d4fb4b43317e88271c, type: 2}
   m_CullingMode: 0
@@ -3749,6 +3749,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolGood: []
   poolBad: []
+  maxProbG: 0
+  maxProbB: 0
 --- !u!1 &1324221478
 GameObject:
   m_ObjectHideFlags: 0

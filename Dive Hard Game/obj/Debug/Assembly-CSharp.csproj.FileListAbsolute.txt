@@ -510,3 +510,5 @@ C:\Users\diego\Desktop\Semestre 6\Taller 6\Dive Hard Project\Dive_Hard_Repositor
 C:\Users\diego\Desktop\Semestre 6\Taller 6\Dive Hard Project\Dive_Hard_Repository\Dive Hard Game\obj\Debug\Assembly-CSharp.pdb
 C:\Users\ASUS X555Q\Documents\GitHub\Dive_Hard_Repository\Dive Hard Game\Temp\bin\Debug\UnityEditor.UI.dll
 C:\Users\ASUS X555Q\Documents\GitHub\Dive_Hard_Repository\Dive Hard Game\Temp\bin\Debug\UnityEditor.UI.xml
+C:\Users\diego\Desktop\Semestre 6\Taller 6\Dive Hard Project\Dive_Hard_Repository\Dive Hard Game\Temp\bin\Debug\UnityEditor.UI.dll
+C:\Users\diego\Desktop\Semestre 6\Taller 6\Dive Hard Project\Dive_Hard_Repository\Dive Hard Game\Temp\bin\Debug\UnityEditor.UI.xml

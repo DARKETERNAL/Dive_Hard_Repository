@@ -68,7 +68,7 @@ public class Spawner : MonoBehaviour
         {
             k = Random.Range(0, mPools.maxProbG);
             s = SelectorG(k);
-            print(s + " G");
+            
             if ((s < 0)) { goodBool = true; yield break; }
 
             aspirantG[i] = mPools.poolGood[s];
@@ -105,7 +105,7 @@ public class Spawner : MonoBehaviour
         }
         yield return new WaitForSeconds(0.8f);
         //posible correccion de offsets
-        selectedG.transform.position = GV + selectedG.offSet + new Vector3(-target.velocity.x * .8f, 0, 0);
+        selectedG.transform.position = GV + selectedG.offSet + new Vector3(-target.velocity.x * .98f, 0, 0);
         selectedG.selfR.simulated = true;
         selectedG.selfR.velocity = new Vector2(target.velocity.x * 0.98f, 0);
         selectedG.active = true;
@@ -151,7 +151,7 @@ public class Spawner : MonoBehaviour
         {
             k = Random.Range(0, mPools.maxProbB);
             s = SelectorB(k);
-            print(s + " B");
+
             if ((s < 0)) { badBool = true; yield break; }
 
             aspirantB[i] = mPools.poolBad[s];
@@ -179,7 +179,7 @@ public class Spawner : MonoBehaviour
         }
         yield return new WaitForSeconds(0.8f);
         //posible correccion de offsets
-        selectedB.transform.position = BV + selectedB.offSet + new Vector3(-target.velocity.x * .8f, 0, 0);
+        selectedB.transform.position = BV + selectedB.offSet + new Vector3(-target.velocity.x * .98f, 0, 0);
         selectedB.selfR.simulated = true;
         selectedB.selfR.velocity = new Vector2(target.velocity.x * 0.98f, 0);
         selectedB.active = true;

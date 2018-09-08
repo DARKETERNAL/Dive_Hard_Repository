@@ -71,13 +71,8 @@ public class Swipe : PassiveMechanics {
 			counterSprites[i] = (g.GetComponent<Image>());
 		}
 		baseColor = counterSprites[0].color;
-	}
-
-    void Start()
-    {
-        swipeAnim = GetComponent<Animator>();
+        swipeAnim = GameObject.Find("Swipe-Animator").GetComponent<Animator>();
         lanzador = GameObject.Find("Flecha").GetComponent<Lanzador>();
-        StartCoroutine("SwipeInstruction");
     }
 
     void Update()
@@ -140,17 +135,22 @@ public class Swipe : PassiveMechanics {
 			{
 				counterSprites[i].color = new Color(baseColor.r, baseColor.g, baseColor.b, 0);
 			}
-			Reset();
+
+            hasSwiped = true;
+            
+            swipeAnim.SetBool("swipe",false);
+            
+            Reset();
 		}
 
 		//CooldDown
 		if(counter < maxCounter)
 		{
-			if(!isUp)
+           
+            if (!isUp)
 			{
-				timer += Time.deltaTime;
-
-				counterSprites[counter].color = new Color(baseColor.r, baseColor.g, baseColor.b, timer / coldDown);
+                timer += Time.deltaTime;
+                counterSprites[counter].color = new Color(baseColor.r, baseColor.g, baseColor.b, timer / coldDown);
 				if (timer >= coldDown)
 					isUp = true;
 			}
@@ -165,29 +165,31 @@ public class Swipe : PassiveMechanics {
 
         //print(counter);
 
-        if(swipeAnim.enabled == true)
-        {
-            swipeAnim.enabled = false;
-        }
-        
-        
-        
-	}
-
-    IEnumerator SwipeInstruction()
-    {
         if (lanzador.launched == true)
         {
             if (hasSwiped == false)
             {
+                StartCoroutine("SwipeInstruction");
             }
         }
+
         
-        yield return new WaitForSeconds(3);
-        swipeAnim.enabled = true;
+
+
+
     }
 
-	private void Reset()
+    IEnumerator SwipeInstruction()
+    {
+
+
+        yield return new WaitForSeconds(3);
+        if (hasSwiped == false)
+            swipeAnim.SetBool("swipe",true);
+        
+    }
+
+    private void Reset()
 	{
 		starTouch = swipeDelta = Vector2.zero;
 		isDraging = false;
