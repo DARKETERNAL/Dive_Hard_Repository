@@ -102,7 +102,7 @@ public class Lanzador : MonoBehaviour {
 		{
 			if (canClic)
 			{
-				if (click)
+				if ()
 				{
 					running = true;
 					aim = false;

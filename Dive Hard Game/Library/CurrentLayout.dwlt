@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 4}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 163
+  controlID: 33
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -114,7 +114,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: "Diego\xB4s Way"
+  m_LastLoadedLayoutName: 
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 30
     width: 1346
     height: 659
-  m_MinSize: {x: 711, y: 492}
+  m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 225
+  controlID: 89
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,10 +180,10 @@ MonoBehaviour:
     y: 0
     width: 707
     height: 659
-  m_MinSize: {x: 200, y: 321}
-  m_MaxSize: {x: 4002, y: 8021}
+  m_MinSize: {x: 202, y: 342}
+  m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 257
+  controlID: 12
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -278,8 +278,8 @@ MonoBehaviour:
     y: 338
     width: 707
     height: 321
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -371,9 +371,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a4abfdff
+    m_SelectedIDs: 98260000
     m_LastClickedID: 0
-    m_ExpandedIDs: 8877feffcafbffff00000000ba300000d6310000ba420000
+    m_ExpandedIDs: e6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -468,7 +468,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Pre proyect/Scripts
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
@@ -481,7 +481,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 04400000
     m_LastClickedID: 16388
-    m_ExpandedIDs: 00000000f42a0000fa2a0000182b0000222b0000262b0000622b0000662b00007a2b00008a2b0000922b00009c2b0000a02b0000a42b0000a82b0000d82b0000de2b0000f42b0000f62b0000f82b0000002c00001a2c0000262c00002e2c0000302c0000382c0000542c0000582c0000642c0000882c00008a2c00008e2c0000ca2c0000d82c0000da2c0000dc2c0000e22c0000002d00005e2d00008e2d0000922d0000982d00009e2d0000ba2d0000c42d0000c62d0000c82d0000e02d0000e62d0000ea2d0000042e0000102e0000202e0000502e0000542e0000762e0000782e00007a2e0000b82e0000ce2e0000d42e0000d62e0000ec2e0000ee2e0000262f00002a2f0000342f0000422f00004c2f00004e2f00006a2f0000722f00008a2f00009c2f00004e320000
+    m_ExpandedIDs: 00000000d62a0000dc2a0000fa2a0000042b0000082b0000442b0000482b00005c2b00006c2b0000742b00007e2b0000822b0000862b00008a2b0000ba2b0000c02b0000d62b0000d82b0000da2b0000e22b0000fc2b0000082c0000102c0000122c00001a2c0000362c00003a2c0000462c00006a2c00006c2c0000702c0000ac2c0000ba2c0000bc2c0000be2c0000c42c0000e22c0000402d0000702d0000742d00007a2d0000802d00009c2d0000a62d0000a82d0000aa2d0000c22d0000c82d0000cc2d0000e62d0000f22d0000022e0000322e0000362e0000582e00005a2e00005c2e00009a2e0000b02e0000b62e0000b82e0000ce2e0000d02e0000082f00000c2f0000162f0000242f00002e2f0000302f00004c2f0000542f00006c2f00007e2f000042320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -506,10 +506,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 746.34515}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000f42a0000fa2a0000182b0000222b0000262b0000622b0000662b00007a2b00008a2b0000922b00009c2b0000a02b0000a42b0000a82b0000d82b0000de2b0000f42b0000f62b0000f82b0000002c00001a2c0000262c00002e2c0000302c0000382c0000542c0000582c0000642c0000882c00008a2c00008e2c0000ca2c0000d82c0000da2c0000dc2c0000e22c0000002d00005e2d00008e2d0000922d0000982d00009e2d0000ba2d0000c42d0000c62d0000c82d0000e02d0000e62d0000ea2d0000042e0000102e0000202e0000502e0000542e0000762e0000782e00007a2e0000b82e0000ce2e0000d42e0000d62e0000ec2e0000ee2e0000262f00002a2f0000342f0000422f00004c2f00004e2f00006a2f0000722f00008a2f00009c2f00004e320000
+    m_ExpandedIDs: ffffffff00000000d62a0000dc2a0000fa2a0000042b0000082b0000442b0000482b00005c2b00006c2b0000742b00007e2b0000822b0000862b00008a2b0000ba2b0000c02b0000d62b0000d82b0000da2b0000e22b0000fc2b0000082c0000102c0000122c00001a2c0000362c00003a2c0000462c00006a2c00006c2c0000702c0000ac2c0000ba2c0000bc2c0000be2c0000c42c0000e22c0000402d0000702d0000742d00007a2d0000802d00009c2d0000a62d0000a82d0000aa2d0000c22d0000c82d0000cc2d0000e62d0000f22d0000022e0000322e0000362e0000582e00005a2e00005c2e00009a2e0000b02e0000b62e0000b82e0000ce2e0000d02e0000082f00000c2f0000162f0000242f00002e2f0000302f00004c2f0000542f00006c2f00007e2f000042320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -525,7 +525,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 9}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -608,8 +608,8 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
+    m_HSlider: 1
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
       y: 17
       width: 705
       height: 283
-    m_Scale: {x: 0.39305556, y: 0.39305556}
+    m_Scale: {x: 1, y: 1}
     m_Translation: {x: 352.5, y: 141.5}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -630,12 +630,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -896.81976
-      y: -360
-      width: 1793.6395
-      height: 720
+      x: -352.5
+      y: -141.5
+      width: 705
+      height: 283
     m_MinimalGUI: 1
-  m_defaultScale: 0.39305556
+  m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 705, y: 300}

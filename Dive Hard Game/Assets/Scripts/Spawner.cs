@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Mathf.Abs(target.velocity.x) > 20 || Mathf.Abs(target.velocity.y) > 20)
+        if (Mathf.Abs(target.velocity.x) > 40 || Mathf.Abs(target.velocity.y) > 40)
         {
             if (goodBool)
                 StartCoroutine(GoodS());
@@ -80,7 +80,7 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         Vector2 acF = target.velocity;
         GV = target.transform.position + new Vector3((acF.x * tG) + ((acF.x - acI.x) * (tG) * (tG)) / 2, (acF.y * tG) + ((acF.y - acI.y) * (tG) * (tG)) / 2, 0);
-        if (GV.y <= 0) { goodBool = true; yield break; }
+        if (GV.y <= 20) { goodBool = true; yield break; }
 
         selectedG = null;
 
@@ -144,7 +144,7 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         Vector2 acF = target.velocity;
         BV = target.transform.position + new Vector3((acF.x * tB) + ((acF.x - acI.x) * (tB) * (tB)) / 2, (acF.y * tB) + ((acF.y - acI.y) * (tB) * (tB)) / 2, 0);
-        if (BV.y <= 0) { badBool = true; yield break; }
+        if (BV.y <= 20) { badBool = true; yield break; }
 
         selectedB = null;
         for (int i = 0; i < aspirantB.Length; i++)
