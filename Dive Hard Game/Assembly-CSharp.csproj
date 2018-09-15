@@ -123,6 +123,8 @@
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\SpeedCounter.cs" />
     <Compile Include="Assets\Scripts\Swipe.cs" />
+    <Compile Include="Assets\Scripts\UI\Pause.cs" />
+    <Compile Include="Assets\Scripts\UI\Restart.cs" />
     <Compile Include="Assets\Scripts\VelocidadFinal.cs" />
     <Compile Include="Assets\Scripts\World.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

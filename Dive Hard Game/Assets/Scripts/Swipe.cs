@@ -184,7 +184,7 @@ public class Swipe : PassiveMechanics {
             if (Input.touches.Length > 0)
                 puntero.position = Input.touches[0].position;
             else
-                puntero.position = new Vector3(1500, 0, 0);
+                puntero.position = new Vector3(3000, 0, 0);
 
             if (Input.GetMouseButton(0))
             {
@@ -192,10 +192,10 @@ public class Swipe : PassiveMechanics {
                 puntero.position = new Vector3(tapPos.x, tapPos.y, transform.position.z);
             }
             else
-                puntero.position = new Vector3(1500, 0, 0);
+                puntero.position = new Vector3(3000, 0, 0);
         }
         else
-            puntero.position = new Vector3(1500, 0, 0);
+            puntero.position = new Vector3(3000, 0, 0);
     }
 
     IEnumerator SwipeInstruction()
