@@ -20,4 +20,7 @@ Debido a que este juego tambien lo presentamos en Taller 6, tenemos otro compañ
 
 Bugs.
 
- -El meteoro
+ -El meteoro no funciona como debería.
+ -El personaje en ocasiones se resbala antes de ser lanzado.
+ -Si se cae muy rapido no se cuentan los puntos por caida
+ 
