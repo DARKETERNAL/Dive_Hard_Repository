@@ -20,9 +20,9 @@ Debido a que este juego tambien lo presentamos en Taller 6, tenemos otro compañ
 
 Bugs.
 
--El meteoro no funciona como debería.
+-El meteoro no funciona como debería.(Cambiar donde y cada cuanto Spawnea el Meteoro, ver que posicion del jugador esta checkeando)
 
--El personaje en ocasiones se resbala antes de ser lanzado.
+-El personaje en ocasiones se resbala antes de ser lanzado.(Mejorar la precision del punto desde donde es lanzado)
 
 -Si se cae muy rapido no se cuentan los puntos por caida. (se podría solucionar cambiado el metodo de detección que es un trigger, por una función que revice cuando el personaje esté mas abajo de cierta altura)
  
