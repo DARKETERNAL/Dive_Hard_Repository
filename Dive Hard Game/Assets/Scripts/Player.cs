@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System.IO;
-using System;
 
 public class Player : MonoBehaviour
 {
@@ -22,15 +20,6 @@ public class Player : MonoBehaviour
     public int paloma;
     public int swipe;
 
-    private void Start()
-    {
-        string[] bloodLine = { bloodInGame.ToString()};
-        if (File.Exists((Path.Combine(Application.dataPath, "blood.txt")))) ;
-        {
-            File.WriteAllLines(Path.Combine(Application.dataPath, "blood.txt"), bloodLine);
-        }
-        File.ReadAllLines(Path.Combine(Application.dataPath, "blood.txt"));
-    }
 
 
     private void Update()

@@ -20,7 +20,7 @@ public class Lanzador : MonoBehaviour {
 	bool running = true;
 	bool aim = true;
 	bool oneTimeAim = true;
-    public bool jumping = true;
+	public bool jumping = true;
 	public bool canClic;
 	bool click;
     public bool launched = false;
@@ -44,6 +44,8 @@ public class Lanzador : MonoBehaviour {
 
 		tapSprite.enabled = true;
 		Invoke("TapSignal", 5);
+
+
     }
 	
 	// Update is called once per frame
@@ -60,6 +62,19 @@ public class Lanzador : MonoBehaviour {
 			Time.timeScale = 0.3f;
 
 		click = Input.GetButtonDown("Fire1");
+
+		if (click)
+		{
+
+
+			if (IsInvoking("TapSignal"))
+				CancelInvoke("TapSignal");
+
+			tapSprite.enabled = false;
+
+			running = false;
+			mDirector.enabled = true;
+		}
 
 
 		if(running == false)
@@ -143,15 +158,4 @@ public class Lanzador : MonoBehaviour {
 	{
 		tapSprite.enabled = true;
 	}
-
-    public void OnPointChecher()
-    {
-        if (IsInvoking("TapSignal"))
-            CancelInvoke("TapSignal");
-
-        tapSprite.enabled = false;
-
-        running = false;
-        mDirector.enabled = true;
-    }
 }

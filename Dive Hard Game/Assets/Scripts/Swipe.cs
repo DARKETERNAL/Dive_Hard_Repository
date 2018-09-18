@@ -31,9 +31,6 @@ using UberAudio;
 
 public class Swipe : PassiveMechanics {
 
-    //Puntero
-    public RectTransform puntero;
-
 	//Cosas para el counter del swipe
 	[SerializeField]
 	public GameObject swipeCounter;
@@ -79,95 +76,92 @@ public class Swipe : PassiveMechanics {
     }
 
     void Update()
-    {
-        tap = false;
+	{		
+		tap = false;
 
-        #region Mouse Inputs
-        if (Input.GetMouseButtonDown(0))
-        {
-            tap = true;
-            isDraging = true;
-            starTouch = Input.mousePosition;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            Reset();
-        }
+		#region Mouse Inputs
+		if (Input.GetMouseButtonDown(0))
+		{
+			tap = true;
+			isDraging = true;
+			starTouch = Input.mousePosition;
+		}
+		else if (Input.GetMouseButtonUp(0))
+		{
+			Reset();
+		}
 
-        #endregion
+		#endregion
 
-        #region Mobile Inputs
-        if (Input.touches.Length > 0)
-        {
-            if (Input.touches[0].phase == TouchPhase.Began)
-            {
-                tap = true;
-                isDraging = true;
-                if (starTouch == Vector2.zero)
-                    starTouch = Input.touches[0].position;
-            }
-            else if (Input.touches[0].phase == TouchPhase.Ended || Input.touches[0].phase == TouchPhase.Canceled)
-            {
-                Reset();
-            }
-        }
+		#region Mobile Inputs
+		if (Input.touches.Length > 0)
+		{
+			if (Input.touches[0].phase == TouchPhase.Began)
+			{
+				tap = true;
+				isDraging = true;
+				if(starTouch == Vector2.zero)
+					starTouch = Input.touches[0].position;
+			}
+			else if (Input.touches[0].phase == TouchPhase.Ended || Input.touches[0].phase == TouchPhase.Canceled)
+			{
+				Reset();
+			}
+		}
 
-        #endregion
+		#endregion
 
-        swipeDelta = Vector2.zero;
-        //Calcular Distancia
-        if (isDraging)
-        {
-
-            if (Input.touches.Length > 0)
-                swipeDelta = Input.touches[0].position - starTouch;
-
-            if (Input.GetMouseButton(0))
-                swipeDelta = (Vector2)Input.mousePosition - starTouch;
-
-        }
+		swipeDelta = Vector2.zero;
+		//Calcular Distancia
+		if (isDraging)
+		{ 
+			if (Input.touches.Length > 0)
+				swipeDelta = Input.touches[0].position - starTouch;
+			if (Input.GetMouseButton(0))
+				swipeDelta = (Vector2)Input.mousePosition - starTouch;
+		}
 
 
-        //Pasar la Zona muerta
-        if (swipeDelta.magnitude > 200 && counter > 0)
-        {
+		//Pasar la Zona muerta
+		if (swipeDelta.magnitude > 200 && counter > 0)
+		{
             GetComponent<Player>().bloodInGame += (GetComponent<Player>().swipe * GetComponent<Player>().venenoMult); //suma sangre 
-            mRB.AddForce(multiplicador * swipeDelta.normalized * magnitud, ForceMode2D.Impulse);
-            counter--;
-            BloodSplash(10, 100, 250, transform);
+            mRB.AddForce(multiplicador*swipeDelta.normalized * magnitud,ForceMode2D.Impulse);
+			counter--;
+			BloodSplash(10, 100, 250, transform);
 
-            AudioManager.Instance.Play("Swipe");
-            for (int i = counter; i < maxCounter; i++)
-            {
-                counterSprites[i].color = new Color(baseColor.r, baseColor.g, baseColor.b, 0);
-            }
+			AudioManager.Instance.Play("Swipe");
+			for (int i = counter; i < maxCounter; i++)
+			{
+				counterSprites[i].color = new Color(baseColor.r, baseColor.g, baseColor.b, 0);
+			}
 
             hasSwiped = true;
-
-            swipeAnim.SetBool("swipe", false);
-
+            
+            swipeAnim.SetBool("swipe",false);
+            
             Reset();
-        }
+		}
 
-        //CooldDown
-        if (counter < maxCounter)
-        {
-
+		//CooldDown
+		if(counter < maxCounter)
+		{
+           
             if (!isUp)
-            {
+			{
                 timer += Time.deltaTime;
                 counterSprites[counter].color = new Color(baseColor.r, baseColor.g, baseColor.b, timer / coldDown);
-                if (timer >= coldDown)
-                    isUp = true;
-            }
-            else
-            {
-                timer = 0;
-                isUp = false;
-                counterSprites[counter].color = new Color(baseColor.r, baseColor.g, baseColor.b, 1);
-                counter++;
-            }
-        }
+				if (timer >= coldDown)
+					isUp = true;
+			}
+			else
+			{
+				timer = 0;
+				isUp = false;
+				counterSprites[counter].color = new Color(baseColor.r, baseColor.g, baseColor.b, 1);
+				counter++;
+			}
+		}
 
         //print(counter);
 
@@ -178,24 +172,11 @@ public class Swipe : PassiveMechanics {
                 StartCoroutine("SwipeInstruction");
             }
         }
-        //Puntero
-        if(counter != 0 )
-        { 
-            if (Input.touches.Length > 0)
-                puntero.position = Input.touches[0].position;
-            else
-                puntero.position = new Vector3(3000, 0, 0);
 
-            if (Input.GetMouseButton(0))
-            {
-                Vector3 tapPos = Input.mousePosition;
-                puntero.position = new Vector3(tapPos.x, tapPos.y, transform.position.z);
-            }
-            else
-                puntero.position = new Vector3(3000, 0, 0);
-        }
-        else
-            puntero.position = new Vector3(3000, 0, 0);
+        
+
+
+
     }
 
     IEnumerator SwipeInstruction()
