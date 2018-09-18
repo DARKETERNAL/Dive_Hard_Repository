@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Paracaidas : MundoConTienda
+public class Paracaidas : ObjectsParents
 {
     [SerializeField]
     float cantidadFrenar = 2;
@@ -16,7 +16,7 @@ public class Paracaidas : MundoConTienda
     {
         Rigidbody2D rb = _jugador.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2((rb.velocity.x / cantidadFrenar), Mathf.Abs(rb.velocity.y / cantidadFrenar));
-        Destroy(GetComponent<Paracaidas>());
+        
         //Aqui un sonido de rebote en paracaidas
         //animación del rebote en paracaidas
         yield return null;

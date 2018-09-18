@@ -201,7 +201,7 @@ public class Swipe : PassiveMechanics {
 			this.enabled = false;
 
 	}
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.name == "Sigue PJ")
             this.enabled = false;

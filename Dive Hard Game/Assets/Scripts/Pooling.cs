@@ -1,39 +1,29 @@
-﻿using System.Collections;
+﻿  using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Pooling : MonoBehaviour
 {
 
-    public MundoConTienda[] poolGood;
-    public MundoSinTienda[] poolBad;
-    public int maxProbG, maxProbB;
+  
+    public ObjectsParents[] pool;
+    public int  maxProb;
 
     // Use this for initialization
     void Awake()
     {
-
-        MundoConTienda[] tempPoolGood = Resources.LoadAll<MundoConTienda>("Prefabs");
-        MundoSinTienda[] tempPoolBad = Resources.LoadAll<MundoSinTienda>("Prefabs");
-
-        poolGood = new MundoConTienda[tempPoolGood.Length * 3];
-        for (int i = 0; i < poolGood.Length; i += tempPoolGood.Length)
+      
+        ObjectsParents[] tempPool = Resources.LoadAll<ObjectsParents>("Prefabs");
+ 
+        pool = new ObjectsParents[tempPool.Length * 3];
+        for (int i = 0; i < pool.Length; i += tempPool.Length)
         {
-            for (int j = 0; j < tempPoolGood.Length; j++)
+            for (int j = 0; j < tempPool.Length; j++)
             {
-                poolGood[i + j] = Instantiate(tempPoolGood[j], new Vector3(-500, -500, 0), Quaternion.identity);
-                poolGood[i + j].pobRange = new Vector2(maxProbG, maxProbG + poolGood[i + j].Probability - 1);
-                maxProbG += poolGood[i + j].Probability;
-            }
-        }
-        poolBad = new MundoSinTienda[tempPoolBad.Length * 3];
-        for (int i = 0; i < poolBad.Length; i += tempPoolBad.Length)
-        {
-            for (int j = 0; j < tempPoolBad.Length; j++)
-            {
-                poolBad[i + j] = Instantiate(tempPoolBad[j], new Vector3(-500, -500, 0), Quaternion.identity);
-                poolBad[i + j].pobRange = new Vector2(maxProbB,maxProbB + poolBad[i + j].Probability - 1);
-                maxProbB += poolBad[i + j].Probability;
+                pool[i + j] = Instantiate(tempPool[j], new Vector3(-500, -500, 0), Quaternion.identity);
+                pool[i + j].pobRange = new Vector2(maxProb,maxProb + pool[i + j].Probability - 1);
+                maxProb += pool[i + j].Probability;
+                Debug.Log(string.Format("{0} [{1},{2}] {3} / {4}", pool[i + j].Probability,maxProb - pool[i + j].Probability, maxProb - 1, maxProb, pool[i + j].name));
             }
         }
     }

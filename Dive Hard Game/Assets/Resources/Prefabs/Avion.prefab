@@ -89,14 +89,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ef8d47e960b294a86f8decb7bdf819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storeIndex: 0
   active: 0
-  probability: 20
+  probability: 1
   height: 6000
   inverseRange: 0
-  offSet: {x: 0, y: 0, z: 0}
-  BloodParticles: {fileID: 1682618923521516, guid: ff564dbbd0ede3a4697970c801b0a891,
-    type: 2}
+  offSet: {x: -1, y: 3, z: 0}
   pobRange: {x: 0, y: 0}
   selfR: {fileID: 0}
   cantidadFrenar: 2

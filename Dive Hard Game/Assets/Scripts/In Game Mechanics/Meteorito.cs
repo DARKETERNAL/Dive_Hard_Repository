@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Meteorito : MundoConTienda {
+public class Meteorito : ConTienda {
 
 	[SerializeField]
 	float amount = 1.02f;

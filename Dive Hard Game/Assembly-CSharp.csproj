@@ -112,8 +112,8 @@
     <Compile Include="Assets\Scripts\In Game Mechanics\Slime.cs" />
     <Compile Include="Assets\Scripts\In Game Mechanics\StartActive.cs" />
     <Compile Include="Assets\Scripts\InicioButtons.cs" />
-    <Compile Include="Assets\Scripts\Parenting\MundoConTienda.cs" />
-    <Compile Include="Assets\Scripts\Parenting\MundoSinTienda.cs" />
+    <Compile Include="Assets\Scripts\Parenting\ConTienda.cs" />
+    <Compile Include="Assets\Scripts\Parenting\ObjectsParents.cs" />
     <Compile Include="Assets\Scripts\Parenting\PassiveMechanics.cs" />
     <Compile Include="Assets\Scripts\Parenting\StoreObjectsParent.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />

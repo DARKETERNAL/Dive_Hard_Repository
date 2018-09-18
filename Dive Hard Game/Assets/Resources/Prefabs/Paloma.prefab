@@ -75,7 +75,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00019800659, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.0651882
 --- !u!114 &114785779491759186
@@ -89,16 +89,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee5d9f3a0f1909409224e7dd88ea218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storeIndex: 0
   active: 0
-  probability: 50
+  probability: 1
   height: 3000
   inverseRange: 0
-  offSet: {x: 0, y: 0, z: 0}
-  BloodParticles: {fileID: 1682618923521516, guid: ff564dbbd0ede3a4697970c801b0a891,
-    type: 2}
+  offSet: {x: 1, y: 1, z: 0}
   pobRange: {x: 0, y: 0}
   selfR: {fileID: 0}
+  storeIndex: 0
+  BloodParticles: {fileID: 1682618923521516, guid: ff564dbbd0ede3a4697970c801b0a891,
+    type: 2}
   cantidadAcelerar: 2
 --- !u!212 &212949833483395124
 SpriteRenderer:
