@@ -416,7 +416,7 @@ namespace UberAudio
                 {
                     BankReferenceCounts.Remove(bankName);
 
-                    Debug.Log("AudioManager: Unload bank " + bankName);
+                    //Debug.Log("AudioManager: Unload bank " + bankName);
 
                     var keysToDelete = new List<string>();
                     foreach (var kvp in AudioEvents)

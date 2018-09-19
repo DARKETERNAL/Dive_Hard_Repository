@@ -23,7 +23,7 @@ public class Pooling : MonoBehaviour
                 pool[i + j] = Instantiate(tempPool[j], new Vector3(-500, -500, 0), Quaternion.identity);
                 pool[i + j].pobRange = new Vector2(maxProb,maxProb + pool[i + j].Probability - 1);
                 maxProb += pool[i + j].Probability;
-                Debug.Log(string.Format("{0} [{1},{2}] {3} / {4}", pool[i + j].Probability,maxProb - pool[i + j].Probability, maxProb - 1, maxProb, pool[i + j].name));
+                //Debug.Log(string.Format("{0} [{1},{2}] {3} / {4}", pool[i + j].Probability,maxProb - pool[i + j].Probability, maxProb - 1, maxProb, pool[i + j].name));
             }
         }
     }
