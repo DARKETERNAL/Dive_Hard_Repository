@@ -12,13 +12,19 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectGenerator>VSTU</UnityProjectGenerator>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2018.2.3f1</UnityVersion>
     <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,14 +47,18 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="mscorlib" />
-    <Reference Include="System" />
-    <Reference Include="System.XML" />
-    <Reference Include="System.Core" />
-    <Reference Include="Boo.Lang" />
-    <Reference Include="UnityScript.Lang" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="Managed/UnityEngine/UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2018.2.3f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -346,22 +356,6 @@
       <Project>{643E44A1-30C9-471C-E8D5-5B11F10CA8BC}</Project>
       <Name>Dive Hard Game</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEditor.StandardEvents.csproj">
-      <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
-      <Name>UnityEditor.StandardEvents</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.PackageManagerUI.Editor.csproj">
-      <Project>{6877705C-FBD9-0C4F-5AFB-6FB431E5D39D}</Project>
-      <Name>Unity.PackageManagerUI.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{3A848AB7-9891-EDDA-D555-BF184C2F81F4}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{07A21C90-D344-AE1A-8456-9910C203B41A}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DefaultPlayables\Editor\TimelinePlayableWizard.cs" />
@@ -370,49 +364,14 @@
     <Compile Include="Assets\DefaultPlayables\TextSwitcher\Editor\TextSwitcherDrawer.cs" />
     <Compile Include="Assets\DefaultPlayables\TimeDilation\Editor\TimeDilationDrawer.cs" />
     <Compile Include="Assets\DefaultPlayables\TransformTween\Editor\TransformTweenDrawer.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\DropdownOptionListDrawer.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\EditorCoroutine.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\GlyphInfoDrawer.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\KerningPairDrawer.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\SpriteInfoDrawer.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_BaseShaderGUI.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_BitmapShaderGUI.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_ColorGradientAssetMenu.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_ColorGradientEditor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_DropdownEditor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_EditorPanel.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_EditorUtility.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_FontAssetEditor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_InputFieldEditor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_MeshRendererEditor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_PackageUtilities.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_PostBuildProcessHandler.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_ProjectTextSettings.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_ResourcesLoader.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_SDFShaderGUI.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_SettingsEditor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_SpriteAssetEditor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_SpriteAssetImporter.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_SpriteAssetMenu.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_StyleAssetMenu.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_StyleSheetEditor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_SubMesh_Editor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_SubMeshUI_Editor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_UiEditorPanel.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMP_UIStyleManager.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMPro_ContextMenus.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMPro_CreateObjectMenu.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMPro_EditorShaderUtilities.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMPro_FontAssetCreatorWindow.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMPro_FontPlugin.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMPro_SDFMaterialEditor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMPro_SortingLayerHelper.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMPro_TextContainerEditor.cs" />
-    <Compile Include="Assets\TextMesh Pro\Scripts\Editor\TMPro_TexturePostProcessor.cs" />
     <Compile Include="Assets\UberAudio-master\Editor\AudioEditorTools.cs" />
     <Compile Include="Assets\UberAudio-master\Editor\AudioEventEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -430,6 +389,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\blood.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
