@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour
     Rigidbody2D target;
     Vector3 V;
     [SerializeField]
-    float t = 5f;
+    float t = 3f;
     ObjectsParents selected;
     ObjectsParents[] aspirant = new ObjectsParents[4];
     #endregion
@@ -57,13 +57,14 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         Vector2 acF = target.velocity;
         V = target.transform.position + new Vector3((acF.x * t) + ((acF.x - acI.x) * (t) * (t)) / 2, (acF.y * t) + ((acF.y - acI.y) * (t) * (t)) / 2, 0);
-       
+        if (V.y <= 20) { Bool = true; yield break; }
+
         selected = null;
         for (int i = 0; i < aspirant.Length; i++)
         {
           
             k = Random.Range(0, mPools.maxProb);
-            print(k);
+
             s = SelectorB(k);
 
             if (s < 0) { d = s; break; }
@@ -96,7 +97,7 @@ public class Spawner : MonoBehaviour
             yield break;
         }
         yield return new WaitForSeconds(0.01f);
-        if (V.y <= 20 || Vector3.Distance(target.transform.position, V) < (Camera.main.transform.position.z / -2f) + 10) { Bool = true; yield break; }
+        if (Vector3.Distance(target.transform.position, V) < (Camera.main.transform.position.z / -2f) + 10) { Bool = true; yield break; }
        
         //posible correccion de offsets
         selected.transform.position = V + selected.offSet + new Vector3(-target.velocity.x * .87f / 1f, 0, 0);
