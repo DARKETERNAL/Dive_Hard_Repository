@@ -14,7 +14,7 @@ public class Camara : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		posCuerpo = new Vector3(cuerpo.transform.position.x,cuerpo.transform.position.y,-Mathf.Clamp(((Mathf.Abs(cuerpo.velocity.y) + Mathf.Abs(cuerpo.velocity.x))/5f),30,80));
+		posCuerpo = new Vector3(cuerpo.transform.position.x,cuerpo.transform.position.y,-Mathf.Clamp(((Mathf.Abs(cuerpo.velocity.y) + Mathf.Abs(cuerpo.velocity.x))/5f),30,70));
 		transform.position = Vector3.MoveTowards(transform.position, posCuerpo, 10);
 	}
 }

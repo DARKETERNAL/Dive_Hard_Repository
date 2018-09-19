@@ -90,10 +90,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  probability: 1
-  height: 6000
-  inverseRange: 0
-  offSet: {x: -1, y: 3, z: 0}
+  probability: 10
+  height: 700
+  inverseRange: 0.1
+  offSet: {x: 13, y: 5, z: 0}
   pobRange: {x: 0, y: 0}
   selfR: {fileID: 0}
   cantidadFrenar: 2
