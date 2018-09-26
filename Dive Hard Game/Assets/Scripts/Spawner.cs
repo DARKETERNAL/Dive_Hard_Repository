@@ -96,7 +96,7 @@ public class Spawner : MonoBehaviour
             yield break;
         }
         yield return new WaitForSeconds(0.01f);
-        if (V.y + selected.offSet.y <= 20 || Vector3.Distance(target.transform.position, V+selected.offSet) < (Camera.main.transform.position.z / -2f) + 10) { Bool = true; yield break; }
+        if (V.y + selected.offSet.y <= 20 || Vector3.Distance(target.transform.position, V + selected.offSet + new Vector3(-target.velocity.x * .87f / 1f, 0, 0)) < (Camera.main.transform.position.z / -2f) + 10) { Bool = true; yield break; }
 
         //posible correccion de offsets
         selected.transform.position = V + selected.offSet + new Vector3(-target.velocity.x * .87f / 1f, 0, 0);

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Paloma : ConTienda
 {
 	[SerializeField]
-	float cantidadAcelerar = 2;
+	float cantidadAcelerar = 1.2f;
    
 	protected override void Action() //comportamiento pasivo
     {
