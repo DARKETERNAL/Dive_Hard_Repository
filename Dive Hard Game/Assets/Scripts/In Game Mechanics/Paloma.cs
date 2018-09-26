@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UberAudio;
 
 public class Paloma : ConTienda
 {
@@ -18,11 +19,13 @@ public class Paloma : ConTienda
             _jugador.bloodInGame += (_jugador.paloma * _jugador.venenoMult);
             Rigidbody2D rb = _jugador.GetComponent<Rigidbody2D>();
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Abs(rb.velocity.y * cantidadAcelerar));
-        
-        
-		
 
-		//Aqui un sonido de paloma muriendo
+
+
+
+        //Aqui un sonido de paloma muriendo
+        AudioManager.Instance.Play("PigeonDeath");
+
 		yield return null;
 	}
 }

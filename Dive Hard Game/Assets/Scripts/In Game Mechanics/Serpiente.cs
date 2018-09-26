@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UberAudio;
 
 public class Serpiente : ObjectsParents
 {
@@ -20,7 +21,9 @@ public class Serpiente : ObjectsParents
     {
        
             _jugador.Poison(poisonTime, poisonMult);
-            //Aqui un sonido de envenenamiento
+        //Aqui un sonido de envenenamiento
+        AudioManager.Instance.Play("SnakeBite");
+        AudioManager.Instance.Play("PoisonBlob");
             //animación del choque con serpiente
          
         yield return null;
